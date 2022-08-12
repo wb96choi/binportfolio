@@ -1,6 +1,6 @@
 # 최원빈_ 포트폴리오 계획서
 
-
+검색엔진에 사이트링크넣기? SEO(검색엔진최적화)
 
 
 
@@ -10,7 +10,6 @@
 
 ## 목차
 
------------------
 1. 구성
 2. 계획
 3. 참고 레퍼런스 사이트
@@ -18,16 +17,45 @@
 
 -----------------
 ## 1. 구성
-- 메뉴
-<img src="images/구성참고1.png"><img src="images/구성참고2.png"><img src="images/구성참고3.png"><img src="images/구성참고4.png"><img src="images/구성참고5.png">
+**메뉴**
+<style> .img-flex{display:flex;}
+</style>
+<div class="img-flex"><img src="images/구성참고1.png"><img src="images/구성참고2.png"><img src="images/구성참고3.png"><img src="images/구성참고4.png"><img src="images/구성참고5.png"></div>
 
 메뉴 구성은 카페에 올라온 수강생 포트폴리오를 많이 참고 했습니다.
+홈으로 가는 메뉴, 나를 소개하는 메뉴, 작업물(작품), CONTACT 를 포함하여 4개 정도로 구성할 예정입니다.
+
+
+```c
+- HOME
+- about me
+- portfolio(work)
+- CONTACT
+```
 
 
 -----------------
-# 기능 구현
+**작품으로 넣을 것**
+<div class="img-flex"><img src="images/work-slide01.png"><img src="images/work-slide02.png"></div>
+<img src="images/work-slide03.gif">
 
------------------
+작품으로 넣어볼 것들을 세 개정도 추려봤는데
+수업중에 배웠던 여러가지 이미지 슬라이드들을 한 페이지안에 넣어서 하나의 작품으로 만들면 좋겠다 생각했습니다.
+살을 붙이고 다듬어서 "이미지 슬라이드 모음"의 제목으로 하나 만들 예정입니다.
+
+
+<div class="img-flex"><img src="images/work-team.gif"><img src="images/work-team02.gif"></div>
+
+팀 과제로 했던 작품들 역시 수정과 보완을 거쳐 작품으로 넣을 예정입니다.
+
+
+<img src="work-smokingapp">
+
+과제로 제출했던 금연앱 피그마 시안인데 이 역시 코드 잘 따서 모바일 웹으로 만들면 멋있을 것 같아 추가할 예정입니다.
+
+
+
+
 **메인프레임**
 
 * 헤더, 푸터, 토글메뉴창이 모든 페이지마다 실행되도록 함
