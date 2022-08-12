@@ -50,7 +50,7 @@
 팀 과제로 했던 작품들 역시 수정과 보완을 거쳐 작품으로 넣을 예정입니다.
 
 
-<img src="images/work-smokingapp">
+<img src="images/work-smokingapp.png">
 
 과제로 제출했던 금연앱 피그마 시안인데 이 역시 코드 잘 따서 모바일 웹으로 만들면 멋있을 것 같아 추가할 예정입니다.
 
@@ -88,18 +88,18 @@ JSON파일을 팻칭하는 기술은 연마하지 못해 직접 만들어서 연
 
 **참고 시안들**
 
-<img src="images/referencs01.gif">
+<img src="images/reference01.gif">
 
 강사님 깃허브에 포트폴리오 링크가 있더군요
 제일 깔끔하고 제가 넣고 싶은 정보들을 구성에 알맞게 채워나갈 수 있을 것 같아 생각해 두고 있습니다.
 
 
-<img src="images/referencs02.png">
+<img src="images/reference02.png">
 
 언젠가 음악을 듣고 있었는데 참 이쁜 앨범아트가 눈에 들어와서 캡쳐해뒀습니다.
 트랙리스트를 메뉴삼고 쥬얼시디모양으로 코드를 짠다면 씨디모양 포트포리오사이트가 되지 않을까?
 
-<img src="images/referencs03.gif">
+<img src="images/reference03.gif">
 
 재밌는 이미지 슬라이드를 찾던 중에 이런 원형 슬라이드를 봤었는데
 이걸 활용한다면 원형 슬라이드(씨디라 하겠습니다.)를 우측에 두고 시디를 돌릴때마다 다른 메뉴들이 전체적으로 보이게 한다면 멋있는 사이트가 될 것 같습니다.
