@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     font-size: 62.5%;
     line-height: 1.285;
@@ -10,9 +11,9 @@ html {
     font-family: 'Gowun Batang', serif;
     /* font-family: 'Josefin Sans', sans-serif; */
 }
-body {
-    
-}
+
+body {}
+
 ul {
     list-style-type: none;
 }
@@ -36,7 +37,7 @@ button {
     top: 0;
     left: 0;
     z-index: 9;
-  }
+}
 
 #main-header {
     position: fixed;
@@ -54,22 +55,34 @@ button {
     background-color: transparent;
     transition: .5s;
 }
+
 #main-header.on {
     height: 70px;
     background-color: #CEFFAF;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
+
 #main-header .logo {
     font-family: 'Gowun Batang', serif;
     text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7);
 }
+
 #main-header nav #menu {
     display: flex;
     font-family: 'Josefin Sans', sans-serif;
     gap: 2vw;
 }
+
 #main-header nav #menu li.on {
-    color: pink;
+    /* color: pink; */
+
+    /* background-image: url('../images/profile.jpeg'); */
+    background: linear-gradient(blue, pink);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 /* 홈섹션 시작 */
@@ -81,9 +94,10 @@ button {
 
     background-image: url('../images/profile.jpeg');
     background-size: cover;
-    background-attachment:fixed;
+    background-attachment: fixed;
     background-position: center;
 }
+
 #Home:before {
     position: absolute;
     top: 0;
@@ -93,6 +107,7 @@ button {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
 }
+
 #Home article {
     position: absolute;
     right: 0;
@@ -100,7 +115,7 @@ button {
     width: 50vw;
     height: 50vh;
     /* outline: 2px solid red; */
-    font-size: 6rem;
+    font-size: 5rem;
     color: #fff;
 }
 
@@ -108,63 +123,125 @@ button {
 /* 홈섹션 끝 */
 
 /* about 섹션 */
-.mask-color-filter {
-    background-color: #CEFFAF;
-    display: flex;
-}
 #About {
-    width: 50vw;
-    height: 100vh;
+    width: 100vw;
+    height: 200vh;
     background-color: #CEFFAF;
     position: relative;
+    display: flex;
+    flex-direction: column;
 
-    background-image: url('../images/profile.jpeg');
+    /* background-image: url('../images/profile.jpeg');
     background-size: contain;
     background-attachment:fixed;
     background-position: left;
 
-    clip-path: circle(27% at 65% 50%);
+    clip-path: circle(27% at 65% 50%); */
 }
-#About:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
+#About .first-floor {
     width: 100%;
-    height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.3); */
+    display: flex;
 }
-.About {
+.mask-color-filter {
+    background-color: #CEFFAF;
+}
+.profile-clip {
     width: 50vw;
+    height: 100vh;
+
+    background-image: url('../images/profile.jpeg');
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: left;
+
+    clip-path: circle(27% at 60% 50%);
+}
+
+#About .first-floor .intro {
+    width: 100vw;
     height: 100vh;
     /* outline: 2px solid red; */
     color: #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: right;
 }
-.About header {
+
+#About .first-floor .intro header {
     font-size: 4rem;
     margin-bottom: 20px;
+
 }
-.About p {
+
+#About .first-floor .intro p {
     font-size: 2rem;
 }
+#About .second-floor {
+    width: 100%;
+    display: flex;
+}
+#About .second-floor .skill-title {
+    width: 30vw;
+}
+
+
+
 /* about 섹션 끝*/
 
-
+/* work 섹션 */
 
 #Work {
     width: 100vw;
-    height: 200vh;
+    height: 100vh;
     background-color: #C9FFF5;
+    display: flex;
+    align-items: center;
+}
+#Work .work-list {
+    width: 20vw;
+}
+#work .workslider {
+    width: 80vw
 }
 
+
+
+
+
+
+
+
+
+
+
+.swiper {
+    width: 60vw;
+    position: relative;
+  }
+  .swiper-wrapper {
+   
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  .swiper-pagination {
+    position: absolute;bottom: 0;
+  }
+
+/* work 섹션 끝*/
 
 #Contact {
     width: 100vw;
     height: 100vh;
     background-color: pink;
 }
-
-

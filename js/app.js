@@ -49,7 +49,7 @@ $(function () {
         let Aboutsection = document.querySelector("#About").offsetTop;
         let Worksection = document.querySelector("#Work").offsetTop;
         let Contactsection = document.querySelector("#Contact").offsetTop;
-        // console.log(Contactsection);
+        console.log(Contactsection);
 
         // 530 이 넘으면 헤더가
         if (scrollposition >= 530) {
@@ -79,7 +79,7 @@ $(function () {
         });
         // work
         $(window).on('scroll', function () {
-            if (Worksection <= scrollposition + 1) {
+            if (Worksection <= scrollposition ) {
                 $('#menu .idc-work').addClass('on');
                 $('#menu .idc-about').removeClass('on');
             } else {
@@ -88,8 +88,8 @@ $(function () {
         });
         // contact
         $(window).on('scroll', function () {
-            // 2188 = Contactsection
-            if (2188 <= scrollposition) {
+            // 2900 = Contactsection
+            if (2900<= scrollposition) {
                 $('#menu .idc-contact').addClass('on');
                 $('#menu .idc-work').removeClass('on');
             } else {
@@ -103,14 +103,37 @@ $(function () {
 
 $(function(){
     new TypeIt("#Home article header h1", {
-        strings: "뜨거운 웹퍼블리셔",
+        strings: "뜨거운 웹퍼블리셔는",
         speed: 300,
         // waitUntilVisible: true,
       }).go();
       new TypeIt("#Home article p", {
-        strings: "최원빈",
+        strings: "잠을 자지 않는다.",
         speed: 300,
         startDelay: 1500,
         // waitUntilVisible: true,
       }).go();
+});
+
+
+
+
+
+$(function(){
+    const swiper = new Swiper('.workslider', {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        slideToClickedSlide: true,
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 30,
+          slideShadows: true,
+        },
+        pagination: {   
+            el: ".pagination_bullet",   
+            type : 'bullets'
+        }
+    
+      });
 });
