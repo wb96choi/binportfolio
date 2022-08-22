@@ -1,0 +1,336 @@
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100px;
+    /* border: 2px solid black; */
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3rem;
+    padding: 0 5vw;
+    background-color: transparent;
+    transition: .5s;
+}
+
+#main-header.on {
+    height: 70px;
+    background-color: #CEFFAF;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+#main-header .logo {
+    font-family: 'Gowun Batang', serif;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7);
+}
+
+#main-header nav #menu {
+    display: none;
+}
+
+
+
+#main-header #toggle-menu-btn {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    display: block;
+    z-index: 10;
+    position: relative;
+}
+#toggle-menu-btn,
+#toggle-menu-btn span {
+  display: inline-block;
+  transition: .5s;
+  box-sizing: border-box;
+}
+#toggle-menu-btn span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  border-radius: 4px;
+}
+#toggle-menu-btn span:nth-of-type(1) {
+  top: 0;
+}
+
+#toggle-menu-btn span:nth-of-type(2) {
+  top: 14.5px;
+}
+
+#toggle-menu-btn span:nth-of-type(3) {
+  bottom: 0;
+}
+#toggle-menu-btn.active {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+#toggle-menu-btn.active span:nth-of-type(1) {
+    -webkit-transform: translateY(15px) rotate(-45deg);
+    transform: translateY(15px) rotate(-45deg);
+    background-color: #fff;
+}
+
+#toggle-menu-btn.active span:nth-of-type(2) {
+    -webkit-transform: translateY(0) rotate(45deg);
+    transform: translateY(0) rotate(45deg);
+    background-color: #fff;
+}
+
+#toggle-menu-btn.active span:nth-of-type(3) {
+    opacity: 0;
+}
+
+#main-header #mobile-toggle-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateX(100%);
+    transition: .5s;
+    z-index: 9;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-header #mobile-toggle-menu .gnb {
+    
+}
+#main-header #mobile-toggle-menu .gnb li{
+    margin-bottom: 2vh;
+}
+
+
+#main-header #mobile-toggle-menu.on {
+    transform: translateX(0);
+}
+
+#main-header #mobile-toggle-menu li.on {
+    /* color: pink; */
+
+    /* background-image: url('../images/profile.jpeg'); */
+    background: linear-gradient(blue, pink);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* 홈섹션 시작 */
+#Home {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FCFFE7;
+
+    background-image: url('../images/profile.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#Home:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#Home article {
+    position: absolute;
+    right: 0;
+    top: 40vh;
+    width: 50vw;
+    height: 50vh;
+    /* outline: 2px solid red; */
+    font-size: 5rem;
+    color: #fff;
+}
+
+
+/* 홈섹션 끝 */
+
+/* about 섹션 */
+#About {
+    width: 100vw;
+    height: 300vh;
+    background-color: #CEFFAF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    /* background-image: url('../images/profile.jpeg');
+    background-size: contain;
+    background-attachment:fixed;
+    background-position: left;
+
+    clip-path: circle(27% at 65% 50%); */
+}
+
+#About .first-floor {
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.mask-color-filter {
+    background-color: #CEFFAF;
+}
+
+.profile-clip {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('../images/profile.jpeg');
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: left;
+
+    clip-path: circle(27% at 50% 50%);
+}
+
+#About .first-floor .intro {
+    width: 100vw;
+    height: 100vh;
+    /* outline: 2px solid red; */
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+
+#About .first-floor .intro header {
+    font-size: 4rem;
+    margin-bottom: 20px;
+
+}
+
+#About .first-floor .intro p {
+    font-size: 2rem;
+}
+
+#About .second-floor {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    font-size: 3rem;
+}
+
+#About .second-floor .skill-title {
+    width: 40vw;
+}
+
+#About .second-floor .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+
+/* about 섹션 끝*/
+
+/* work 섹션 */
+
+#Work {
+    width: 100vw;
+    height: 100vh;
+    background-color: #C9FFF5;
+    display: flex;
+    align-items: center;
+}
+
+#Work .work-list {
+    width: 20vw;
+    height: 40%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Work .work-list>li {
+    width: 10vw;
+}
+
+#Work .work-list>li.on {
+    border-bottom: 1px solid black;
+}
+
+#Work .work-contents {
+    width: 80vw;
+    height: 100%;
+    border: 2px solid red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Work .work-contents .con {
+    width: 300px;
+    height: 200px;
+    outline: 2px solid red;
+    z-index: 1;
+    position: relative;
+}
+
+#Work .work-contents .con a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#Work .work-contents .con .detail {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+}
+
+#Work .work-contents .con:hover {
+    background-color: rgba(0, 0, 0, 0.406);
+}
+
+#Work .work-contents .con:hover .detail {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* work 섹션 끝*/
+
+#Contact {
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+}

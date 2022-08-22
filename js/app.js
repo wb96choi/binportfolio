@@ -49,7 +49,8 @@ $(function () {
         let Aboutsection = document.querySelector("#About").offsetTop;
         let Worksection = document.querySelector("#Work").offsetTop;
         let Contactsection = document.querySelector("#Contact").offsetTop;
-        console.log(Contactsection);
+        console.log(Worksection);
+        console.log(Aboutsection);
 
         // 530 이 넘으면 헤더가
         if (scrollposition >= 530) {
@@ -63,37 +64,37 @@ $(function () {
         // home
         $(window).on('scroll', function () {
             if (scrollposition < Aboutsection) {
-                $('#menu .idc-home').addClass('on');
+                $('.idc-home').addClass('on');
             } else {
-                $('#menu .idc-home').removeClass('on');
+                $('.idc-home').removeClass('on');
             };
         });
         // about
         $(window).on('scroll', function () {
             if (Aboutsection <= scrollposition + 1) {
-                $('#menu .idc-about').addClass('on');
-                $('#menu .idc-home').removeClass('on');
+                $('.idc-about').addClass('on');
+                $('.idc-home').removeClass('on');
             } else {
-                $('#menu .idc-about').removeClass('on');
+                $('.idc-about').removeClass('on');
             };
         });
         // work
         $(window).on('scroll', function () {
-            if (Worksection <= scrollposition ) {
-                $('#menu .idc-work').addClass('on');
-                $('#menu .idc-about').removeClass('on');
+            if (Worksection <= scrollposition) {
+                $('.idc-work').addClass('on');
+                $('.idc-about').removeClass('on');
             } else {
-                $('#menu .idc-work').removeClass('on');
+                $('.idc-work').removeClass('on');
             };
         });
         // contact
         $(window).on('scroll', function () {
             // 2900 = Contactsection
-            if (2900<= scrollposition) {
-                $('#menu .idc-contact').addClass('on');
-                $('#menu .idc-work').removeClass('on');
+            if (2900 <= scrollposition) {
+                $('.idc-contact').addClass('on');
+                $('.idc-work').removeClass('on');
             } else {
-                $('#menu .idc-contact').removeClass('on');
+                $('.idc-contact').removeClass('on');
             };
         });
 
@@ -101,25 +102,34 @@ $(function () {
     });
 });
 
-$(function(){
+// 모바일 토글메뉴
+$(function () {
+    
+    $('#toggle-menu-btn').click(function () {
+        $('#toggle-menu-btn').toggleClass('active');
+        $('#mobile-toggle-menu').toggleClass('on');
+    })
+});
+
+$(function () {
     new TypeIt("#Home article header h1", {
         strings: "뜨거운 웹퍼블리셔는",
         speed: 300,
         // waitUntilVisible: true,
-      }).go();
-      new TypeIt("#Home article p", {
+    }).go();
+    new TypeIt("#Home article p", {
         strings: "잠을 자지 않는다.",
         speed: 300,
         startDelay: 1500,
         // waitUntilVisible: true,
-      }).go();
+    }).go();
 });
 
 
 
 
 
-$(function(){
+$(function () {
     const swiper = new Swiper('.workslider', {
         loop: true,
         centeredSlides: true,
@@ -127,13 +137,13 @@ $(function(){
         slideToClickedSlide: true,
         effect: 'coverflow',
         coverflowEffect: {
-          rotate: 30,
-          slideShadows: true,
+            rotate: 30,
+            slideShadows: true,
         },
-        pagination: {   
-            el: ".pagination_bullet",   
-            type : 'bullets'
+        pagination: {
+            el: ".pagination_bullet",
+            type: 'bullets'
         }
-    
-      });
+
+    });
 });
