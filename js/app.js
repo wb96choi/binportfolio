@@ -4,36 +4,28 @@ $(function () {
 });
 
 // 마우스 포인터
-$(function () {
-    document.onmousemove = animateCircles; // circle follow mouse
-
-    var colors = ['pink', '#CEFFAF', '#FCFFE7']
-
-    function animateCircles(event) {
-        var circle = document.createElement("div");
-        circle.setAttribute("class", "mousepointer");
-        document.body.appendChild(circle); // adds function to body
-
-        // adds motion
-        circle.style.left = event.clientX + 'px';
-        circle.style.top = event.clientY + 'px';
-
-        // randomize color
-        var color = colors[Math.floor(Math.random() * colors.length)];
-        circle.style.borderColor = color;
-
-        // adds animation
-        circle.style.transition = "all 0.5s linear 0s";
-
-        circle.style.left = circle.offsetLeft - 20 + 'px';
-        circle.style.top = circle.offsetTop - 20 + 'px';
-
-        circle.style.width = "50px";
-        circle.style.height = "50px";
-        circle.style.borderWidth = "5px";
-        circle.style.opacity = 0;
-    }
+$(function(){
+    const $cursor = document.querySelector('.mousepointer');
+    document.addEventListener('mousemove', function(e) {
+      $cursor.style.left = e.clientX + 'px';
+      $cursor.style.top = e.clientY + 'px';
+    });
+    
+    // 클릭 가능한 곳에 호버링을 하면
+    $('#main-header nav #menu > li, #mobile-toggle-menu .gnb > li, #Work .work-list > li, #Work .work-contents .con, #close').mouseenter(function(){
+        $('.mousepointer').css(
+            'transform', 'scale(5)'
+        );
+    });
+    $('#main-header nav #menu > li, #mobile-toggle-menu .gnb > li, #Work .work-list > li, #Work .work-contents .con, #close').mouseleave(function(){
+        $('.mousepointer').css(
+            'transform', 'scale(1)'
+        );
+    });
+    
 });
+
+
 
 // 스크롤좌표값 구하기
 $(function () {
@@ -80,7 +72,7 @@ $(function () {
         });
         // work
         $(window).on('scroll', function () {
-            if (Worksection <= scrollposition) {
+            if (Worksection <= scrollposition +10) {
                 $('.idc-work').addClass('on');
                 $('.idc-about').removeClass('on');
             } else {
@@ -104,7 +96,7 @@ $(function () {
 
 // 모바일 토글메뉴
 $(function () {
-    
+
     $('#toggle-menu-btn').click(function () {
         $('#toggle-menu-btn').toggleClass('active');
         $('#mobile-toggle-menu').toggleClass('on');
@@ -128,22 +120,57 @@ $(function () {
 
 
 
-
+// work 섹션 탭버튼
 $(function () {
-    const swiper = new Swiper('.workslider', {
-        loop: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        slideToClickedSlide: true,
-        effect: 'coverflow',
-        coverflowEffect: {
-            rotate: 30,
-            slideShadows: true,
-        },
-        pagination: {
-            el: ".pagination_bullet",
-            type: 'bullets'
-        }
-
+    // pc site
+    $('#Work .work-list li').eq(0).click(function () {
+        $('#Work .work-list li').removeClass('on');
+        $(this).addClass('on');
+        $('#Work .work-contents').addClass('hide');
+        $('#Work .work-contents').removeClass('on');
+        $('#Work .pc-site').addClass('on');
+    });
+    // mobile site
+    $('#Work .work-list li').eq(1).click(function () {
+        $('#Work .work-list li').removeClass('on');
+        $(this).addClass('on');
+        $('#Work .work-contents').addClass('hide');
+        $('#Work .work-contents').removeClass('on');
+        $('#Work .mobile-site').addClass('on');
+    });
+    // responsive
+    $('#Work .work-list li').eq(2).click(function () {
+        $('#Work .work-list li').removeClass('on');
+        $(this).addClass('on');
+        $('#Work .work-contents').removeClass('on');
+        $('#Work .work-contents').addClass('hide');
+        $('#Work .responsive').addClass('on');
+    });
+    // etc
+    $('#Work .work-list li').eq(3).click(function () {
+        $('#Work .work-list li').removeClass('on');
+        $(this).addClass('on');
+        $('#Work .work-contents').removeClass('on');
+        $('#Work .work-contents').addClass('hide');
+        $('#Work .etc-site').addClass('on');
     });
 });
+
+// work 섹션 modal
+$(function(){
+    $('#Work .work-contents .con').click(function(){
+        $('.modal-shadow').addClass('on');
+    });
+    $('#work-modal #close').click(function(){
+        $('.modal-shadow').removeClass('on');
+    });
+    // 바깥클릭시 모달창 꺼짐
+    $('.modal-shadow').click(function(e){
+        if( !$('#work-modal').has(e.target).length ) $('.modal-shadow').removeClass('on');
+    });
+});
+
+
+
+
+

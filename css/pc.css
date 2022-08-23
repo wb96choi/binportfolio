@@ -43,19 +43,14 @@
     -webkit-background-clip: text;
     color: transparent;
 }
+
 #main-header #toggle-menu-btn,
 #main-header #mobile-toggle-menu {
     display: none;
 }
 
 
-/* .snap-wrap {
-    overflow: auto;
-    scroll-snap-type: y mandatory;
-}
-.snap {
-    scroll-snap-align: start;
-} */
+
 /* 홈섹션 시작 */
 #Home {
     position: relative;
@@ -181,6 +176,7 @@
     background-color: #C9FFF5;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 #Work .work-list {
@@ -192,51 +188,195 @@
     justify-content: space-between;
     align-items: center;
 }
-#Work .work-list > li {
+
+#Work .work-list>li {
     width: 10vw;
+    height: auto;
+    transition: 0.5s;
 }
-#Work .work-list > li.on {
-    border-bottom: 1px solid black;
+
+#Work .work-list>li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #ea2129;
+    transform: scaleX(0);
+    transition: transform .5s ease-in-out;
+}
+
+#Work .work-list>li:hover:after {
+    transform: scaleX(1);
+}
+
+
+#Work .work-list>li:after {
+    transform-origin: 0% 50%;
+}
+
+#Work .work-list>li.on {
+    color: red;
 }
 
 #Work .work-contents {
+    position: absolute;
+    top: 0;
+    left: 20vw;
     width: 80vw;
     height: 100%;
-    border: 2px solid red;
+    padding: 0 5vw;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    display: flex;
+    transition: 0.5s;
+}
 
+#Work .work-contents .container {
+    width: 100%;
+}
+
+#Work .work-contents.hide {
+    opacity: 0;
+    transform: translateX(10%);
+}
+
+#Work .work-contents.on {
+    transition: 0.5s;
+    opacity: 1;
+    z-index: 5;
+    transform: translateX(0);
+}
+
+#Work .work-contents .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Work .work-contents .con {
+    width: 20vw;
+    height: 40vh;
+    outline: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Work .work-contents .con .detail {
+    width: 100%;
+    display: none;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#Work .work-contents .con:hover {
+    background-color: rgba(0, 0, 0, 0.406);
+}
+
+#Work .work-contents .con:hover .detail {
+    display: block;
+}
+
+
+.modal-shadow {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9;
+}
+
+.modal-shadow.on {
+    display: block;
+}
+
+#work-modal {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    width: 70vw;
+    height: 70vh;
+    background-color: #fff;
+    z-index: 10;
+}
+
+#work-modal header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#close {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    font-size: 50px;
+}
+
+#work-modal article {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 70px);
+}
+
+#work-modal article .left-side {
+    width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#Work .work-contents .con {
-    width: 300px;
-    height: 200px;
-    outline: 2px solid red;
-    z-index: 1;
-    position: relative;
-}
-#Work .work-contents .con a {
-    width: 100%;
+
+#work-modal article .left-side .thumbnail {
+    width: 80%;
     height: 100%;
+    outline: 1px solid red;
+}
+
+#work-modal article .left-side .thumbnail img {
+    margin: 0 auto;
+    width: 80%;
     display: block;
 }
-#Work .work-contents .con .detail {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: none;
+
+#work-modal article .right-side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
-#Work .work-contents .con:hover {
-    background-color: rgba(0, 0, 0, 0.406);
-}
-#Work .work-contents .con:hover .detail {
-    position: absolute;
-    bottom: 0;
+
+#work-modal article .right-side .work-info {
+    height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+#work-modal article .right-side .work-info span {
+    font-size: 1.5rem;
+}
 
+#work-modal article .right-side .work-info span h2 {
+    font-size: 2.5rem;
+}
+
+#work-modal article .right-side .work-info span p {
+    white-space: nowrap;
+}
+
+#work-modal article .right-side .detail-btn-group {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
@@ -262,3 +402,24 @@
 
 
 
+
+
+
+
+
+.pc-site {
+    outline: 2px solid red;
+}
+
+
+.mobile-site {
+    outline: 2px solid blue;
+}
+
+.responsive {
+    outline: 2px solid yellowgreen;
+}
+
+.etc-site {
+    outline: 2px solid yellow;
+}
