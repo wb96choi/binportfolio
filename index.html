@@ -36,6 +36,9 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- particle -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 
 
     <link rel="stylesheet" href="css/style.css">
@@ -58,7 +61,7 @@
                     <li class="idc-about"><a href="#About">About me</a></li>
                     <li class="idc-work"><a href="#Work">Work</a></li>
                     <li class="idc-contact"><a href="#Contact">Contact</a></li>
-                    <li><a href="https://github.com/wb96choi">github</a></li>
+                    <li><a href="https://github.com/wb96choi"><img src="images/github.svg" alt="Github"></a></li>
                 </ul>
             </nav>
             <div id="toggle-menu-btn">
@@ -111,6 +114,14 @@
             <div class="second-floor">
                 <div class="skill-title">
                     <h2>제가 자신있는 기술들입니다.</h2>
+                    <ul>
+                        <li><img src="images/html5-icon.png" alt="HTML5"></li>
+                        <li><img src="images/css-icon.png" alt="css"></li>
+                        <li><img src="images/javascript-icon.png" alt="javascript"></li>
+                        <li><img src="images/jquery-icon.png" alt="jquery"></li>
+                        <li><img src="images/VSC-icon.png" alt="Visual Studio Code"></li>
+                        <li><img src="images/figma-icon.png" alt="figma"></li>
+                    </ul>
                 </div>
                 <ul class="skill">
                     <li>
@@ -119,8 +130,8 @@
                         </p>
                     </li>
                     <li>
-                        <h3>UX / UI Development</h3>
-                        <p>HTML, CSS, Javascript를 이해하며 잘 다룰 수 있습니다.<br>
+                        <h3>자바스크립트 라이브러리</h3>
+                        <p>기본적인 라이브러리인 jQuery를 이해하고 react, vue 등 다양한 라이브러리를 배우고 있습니다.<br>
                         </p>
                     </li>
                     <li>
@@ -276,10 +287,12 @@
                             </div>
                             <div class="detail-btn-group">
                                 <button id="readme">
-                                    README
+                                    <a href="https://github.com/wb96choi/hyein_bin">README</a>
+                                    
                                 </button>
                                 <button id="gotogit">
-                                    Github
+                                    <a href="https://wb96choi.github.io/hyein_bin/">Github</a>
+                                    
                                 </button>
                             </div>
                         </div>
@@ -293,13 +306,26 @@
 
 
         <section id="Contact">
+            
+                <!-- particles.js container -->
+                <div id="particles-js"></div> <!-- stats - count particles -->
+            
 
+
+
+
+
+
+            <a href="tel:01044601280">010-4460-1280</a>
+            <!-- <canvas id="canvas" width="700" height="400" style="border:1px solid black"></canvas> -->
         </section>
         <!--Contact 섹션-->
 
 
 
     </div>
+
+
 </body>
 
 </html>

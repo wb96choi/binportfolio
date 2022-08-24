@@ -25,12 +25,6 @@
 **메뉴**
 
 
-<img src="readme-images/구성참고1.png" width="25%"><img src="images/구성참고2.png" width="25%"><img src="readme-images/구성참고3.png" width="25%"><img src="readme-images/구성참고4.png" width="25%"><img src="readme-images/구성참고5.png" width="25%">
-
-메뉴 구성은 카페에 올라온 수강생 포트폴리오를 많이 참고 했습니다.
-홈으로 가는 메뉴, 나를 소개하는 메뉴, 작업물(작품), CONTACT 를 포함하여 4개 정도로 구성할 예정입니다.
-
-
 ```c
 - HOME
 - about me

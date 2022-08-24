@@ -31,7 +31,21 @@
     font-family: 'Josefin Sans', sans-serif;
     gap: 2vw;
 }
-
+#main-header nav #menu li:last-child img{
+    width: 30px;
+}
+#main-header nav #menu li:last-child img:hover{
+    animation-name: git-rolling;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes git-rolling{
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}
 #main-header nav #menu li.on {
     /* color: pink; */
 
@@ -156,6 +170,15 @@
 
 #About .second-floor .skill-title {
     width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+#About .second-floor .skill-title ul {
+    width: 100%;
+    display: flex;
+}
+#About .second-floor .skill-title ul li img {
+    width: 50px;
 }
 
 #About .second-floor .skill {
@@ -393,9 +416,23 @@
 #Contact {
     width: 100vw;
     height: 100vh;
-    background-color: pink;
+    border: 30px solid pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    position: relative;
+z-index: 1;
+    /* background-image: url('../4907157.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
-
+#Contact .particle-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 
 
