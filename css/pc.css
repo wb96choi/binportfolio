@@ -277,17 +277,9 @@
 }
 #Work .work-contents .container .row {
     width: 100%;
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-#Work .work-contents .container .row:not(:first-child){
-    display: none;
-}
-#Work .work-contents .navigator-group {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    align-items: center; */
 }
     /* 상세보기 레이아웃 */
 #contents-wrapper {
@@ -307,11 +299,12 @@
     align-items: center;
 }
 
-#close {
+#contents-wrapper header #close {
     width: 50px;
     height: 50px;
     margin-right: 10px;
     font-size: 50px;
+    display: none;
 }
 
 #contents-wrapper article {

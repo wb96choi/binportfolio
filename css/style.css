@@ -116,13 +116,14 @@ button {
 
 
 
-#prev {
-    width: 150px;
-    height: 50px;
-    background-color: pink;
+
+
+
+
+#swiper-btn {
+    color: pink;
 }
-#next {
-    width: 150px;
-    height: 50px;
-    background-color: pink;
+#swiper-btn:hover {
+    transition: .5s;
+    transform: translateX(-20%);
 }

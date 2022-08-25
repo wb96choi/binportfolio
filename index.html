@@ -24,21 +24,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap" rel="stylesheet">
     <!-- 폰트 (고운 바탕) -->
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- 부트스트랩 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- slick slider CDN -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- jQuery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- typeit CDN -->
     <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
     <!-- particle -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 
     <link rel="stylesheet" href="css/style.css">
@@ -159,9 +160,9 @@
                 <li>PC 사이트</li>
                 <li>기타</li>
             </ul>
-            <div class="work-contents responsive on">
-                <div class="container">
-                    <div class="row">
+            <div class="work-contents responsive swiper on">
+                <div class="swiper-wrapper container">
+                    <div class="row swiper-slide">
                         <div id="contents-wrapper">
                             <header>
                                 <button id="close"><i class="bi bi-x"></i></button>
@@ -205,7 +206,7 @@
                             </article>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row swiper-slide">
                         <div id="contents-wrapper">
                             <header>
                                 <button id="close"><i class="bi bi-x"></i></button>
@@ -249,7 +250,7 @@
                             </article>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row swiper-slide">
                         <div id="contents-wrapper">
                             <header>
                                 <button id="close"><i class="bi bi-x"></i></button>
@@ -296,34 +297,11 @@
 
                 </div>
 
-                <div class="navigator-group">
-                    <button id="prev">좌</button>
-                    <button id="next">우</button>
-                </div>
+                <div class="swiper-button-prev" id="swiper-btn"></div>
+                <div class="swiper-button-next" id="swiper-btn"></div>
             </div>
             <div class="work-contents pc-site">
-                <div class="container">
-                    <div class="row">
-                        <div class="con">
 
-                            <div class="detail">
-                                자세히 보기
-                            </div>
-                        </div>
-                        <div class="con">
-
-                            <div class="detail">
-                                자세히 보기
-                            </div>
-                        </div>
-                        <div class="con">
-
-                            <div class="detail">
-                                자세히 보기
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="work-contents mobile-site">
                 <div class="container">
@@ -465,6 +443,9 @@
 
 
     </div>
+
+
+
 
 
 </body>

@@ -161,31 +161,28 @@ $(function () {
 });
 
 // work 섹션 이미지 슬라이드
-$(function(){
-    var num=0;
-    function nextSlider(img_num){
-        if(num == 3){
-            num=0;
-        }else {
-            num++;
-        };
-        $('#Work .work-contents .container .row').eq(num).fadeIn(500);
-        $('#Work .work-contents .container .row').eq(num - 1).fadeOut(500);
-    };
-    function prevSlider(img_num){
-        if(num == 3){
-            num=0;
-        }else {
-            num++;
-        };
-        $('#Work .work-contents .container .row').eq(num).fadeOut(500);
-        $('#Work .work-contents .container .row').eq(num - 1).fadeIn(500);
-    };
-    $('#next').click(function(){
-        nextSlider();
-    });
-    $('#prev').click(function(){
-        prevSlider();
+$(function () {
+    $(function () {
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            spaceBetween: 50,
+
+        });
+
     });
 
 });
@@ -416,28 +413,24 @@ $(function () {
         "retina_detect": true
     });
     var count_particles, update;
-    
+
     stats.setMode(0);
     stats.domElement.style.position = 'absolute';
     stats.domElement.style.left = '0px';
     stats.domElement.style.top = '0px';
     count_particles = document.querySelector('.js-count-particles');
-    
+
     requestAnimationFrame(update);;
 });
 
 // Contact-way 애니메이션
-$(function(){
-    $('#Contact .contact-way > a').mouseenter(function(){
+$(function () {
+    $('#Contact .contact-way > a').mouseenter(function () {
         $(this).find('.text').stop().fadeOut(500);
         $(this).find('.text-hidden').stop().fadeIn(500);
     });
-    $('#Contact .contact-way > a').mouseleave(function(){
+    $('#Contact .contact-way > a').mouseleave(function () {
         $(this).find('.text').stop().fadeIn(500);
         $(this).find('.text-hidden').stop().fadeOut(500);
     });
 });
-
-
-
-
