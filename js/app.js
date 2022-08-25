@@ -12,12 +12,12 @@ $(function () {
     });
 
     // 클릭 가능한 곳에 호버링을 하면
-    $('#main-header nav #menu > li, #mobile-toggle-menu .gnb > li, #Work .work-list > li, #Work .work-contents .con, #close, #readme, #gotogit').mouseenter(function () {
+    $('#main-header nav #menu > li, #mobile-toggle-menu .gnb > li, #Work .work-list > li, #Work .work-contents .con, #close, #readme, #gotogit, #Contact .contact-way > a').mouseenter(function () {
         $('.mousepointer').css(
             'transform', 'scale(5)'
         );
     });
-    $('#main-header nav #menu > li, #mobile-toggle-menu .gnb > li, #Work .work-list > li, #Work .work-contents .con, #close, #readme, #gotogit').mouseleave(function () {
+    $('#main-header nav #menu > li, #mobile-toggle-menu .gnb > li, #Work .work-list > li, #Work .work-contents .con, #close, #readme, #gotogit, #Contact .contact-way > a').mouseleave(function () {
         $('.mousepointer').css(
             'transform', 'scale(1)'
         );
@@ -132,7 +132,7 @@ $(function () {
         $(this).addClass('on');
         $('#Work .work-contents').addClass('hide');
         $('#Work .work-contents').removeClass('on');
-        $('#Work .pc-site').addClass('on');
+        $('#Work .responsive').addClass('on');
     });
     // mobile site
     $('#Work .work-list li').eq(1).click(function () {
@@ -148,7 +148,7 @@ $(function () {
         $(this).addClass('on');
         $('#Work .work-contents').removeClass('on');
         $('#Work .work-contents').addClass('hide');
-        $('#Work .responsive').addClass('on');
+        $('#Work .pc-site').addClass('on');
     });
     // etc
     $('#Work .work-list li').eq(3).click(function () {
@@ -158,6 +158,36 @@ $(function () {
         $('#Work .work-contents').addClass('hide');
         $('#Work .etc-site').addClass('on');
     });
+});
+
+// work 섹션 이미지 슬라이드
+$(function(){
+    var num=0;
+    function nextSlider(img_num){
+        if(num == 3){
+            num=0;
+        }else {
+            num++;
+        };
+        $('#Work .work-contents .container .row').eq(num).fadeIn(500);
+        $('#Work .work-contents .container .row').eq(num - 1).fadeOut(500);
+    };
+    function prevSlider(img_num){
+        if(num == 3){
+            num=0;
+        }else {
+            num++;
+        };
+        $('#Work .work-contents .container .row').eq(num).fadeOut(500);
+        $('#Work .work-contents .container .row').eq(num - 1).fadeIn(500);
+    };
+    $('#next').click(function(){
+        nextSlider();
+    });
+    $('#prev').click(function(){
+        prevSlider();
+    });
+
 });
 
 // work 섹션 modal
@@ -273,7 +303,7 @@ $(function () {
 
 
 
-
+// 파티클 배경
 $(function () {
     particlesJS("particles-js", {
         "particles": {
@@ -395,3 +425,19 @@ $(function () {
     
     requestAnimationFrame(update);;
 });
+
+// Contact-way 애니메이션
+$(function(){
+    $('#Contact .contact-way > a').mouseenter(function(){
+        $(this).find('.text').stop().fadeOut(500);
+        $(this).find('.text-hidden').stop().fadeIn(500);
+    });
+    $('#Contact .contact-way > a').mouseleave(function(){
+        $(this).find('.text').stop().fadeIn(500);
+        $(this).find('.text-hidden').stop().fadeOut(500);
+    });
+});
+
+
+
+

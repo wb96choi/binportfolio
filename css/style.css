@@ -34,17 +34,21 @@ button {
     border-style: none;
 }
 
-.mousepointer {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #fff;
-    transition: transform 0.2s;
-    mix-blend-mode: difference;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 11;
+.github {
+    width: 30px;
+}
+.github:hover {
+    animation-name: git-rolling;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes git-rolling {
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #readme {
@@ -53,12 +57,24 @@ button {
     background-color: #ccc;
     border-radius: 10px;
 }
+#readme a {
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    display: block;
+}
 
 #gotogit {
     width: 200px;
     height: 30px;
     background-color: #ccc;
     border-radius: 10px;
+}
+#gotogit a {
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    display: block;
 }
 
 
@@ -95,4 +111,18 @@ button {
 
 .count-particles {
     border-radius: 0 0 3px 3px;
+}
+
+
+
+
+#prev {
+    width: 150px;
+    height: 50px;
+    background-color: pink;
+}
+#next {
+    width: 150px;
+    height: 50px;
+    background-color: pink;
 }

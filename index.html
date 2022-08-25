@@ -29,13 +29,13 @@
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- slick slider CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- typeit CDN -->
     <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
-    <!-- swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- particle -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
@@ -61,7 +61,8 @@
                     <li class="idc-about"><a href="#About">About me</a></li>
                     <li class="idc-work"><a href="#Work">Work</a></li>
                     <li class="idc-contact"><a href="#Contact">Contact</a></li>
-                    <li><a href="https://github.com/wb96choi"><img src="images/github.svg" alt="Github"></a></li>
+                    <li><a href="https://github.com/wb96choi"><img class="github" src="images/github.svg"
+                                alt="Github"></a></li>
                 </ul>
             </nav>
             <div id="toggle-menu-btn">
@@ -153,12 +154,154 @@
 
         <section id="Work">
             <ul class="work-list">
-                <li class="on">PC 사이트</li>
+                <li class="on">반응형 웹</li>
                 <li>Mobile 사이트</li>
-                <li>반응형 웹</li>
+                <li>PC 사이트</li>
                 <li>기타</li>
             </ul>
-            <div class="work-contents pc-site on">
+            <div class="work-contents responsive on">
+                <div class="container">
+                    <div class="row">
+                        <div id="contents-wrapper">
+                            <header>
+                                <button id="close"><i class="bi bi-x"></i></button>
+                            </header>
+                            <article>
+                                <div class="left-side">
+                                    <div class="thumbnail">
+                                        <img src="images/AppleiMac.png" alt="imac">
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="work-info">
+                                        <span>
+                                            <h2>111111111프로젝트 개요</h2>
+                                            <p>프로젝트 개요입니다.</p>
+                                        </span>
+                                        <span>
+                                            <h2>작업기간</h2>
+                                            <p>2022.8.23 ~ 2022.8.24</p>
+                                        </span>
+                                        <span>
+                                            <h2>작업기여도</h2>
+                                            <p>기여도 100% (개인작업)</p>
+                                        </span>
+                                        <span>
+                                            <h2>사용기술</h2>
+                                            <p>HTML CSS Javascript jQuery Photoshop</p>
+                                        </span>
+                                    </div>
+                                    <div class="detail-btn-group">
+                                        <button id="readme">
+                                            <a href="https://github.com/wb96choi/hyein_bin">README</a>
+
+                                        </button>
+                                        <button id="gotogit">
+                                            <a href="https://wb96choi.github.io/hyein_bin/">Github</a>
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="contents-wrapper">
+                            <header>
+                                <button id="close"><i class="bi bi-x"></i></button>
+                            </header>
+                            <article>
+                                <div class="left-side">
+                                    <div class="thumbnail">
+                                        <img src="images/AppleiMac.png" alt="imac">
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="work-info">
+                                        <span>
+                                            <h2>2222222222프로젝트 개요</h2>
+                                            <p>프로젝트 개요입니다.</p>
+                                        </span>
+                                        <span>
+                                            <h2>작업기간</h2>
+                                            <p>2022.8.23 ~ 2022.8.24</p>
+                                        </span>
+                                        <span>
+                                            <h2>작업기여도</h2>
+                                            <p>기여도 100% (개인작업)</p>
+                                        </span>
+                                        <span>
+                                            <h2>사용기술</h2>
+                                            <p>HTML CSS Javascript jQuery Photoshop</p>
+                                        </span>
+                                    </div>
+                                    <div class="detail-btn-group">
+                                        <button id="readme">
+                                            <a href="https://github.com/wb96choi/hyein_bin">README</a>
+
+                                        </button>
+                                        <button id="gotogit">
+                                            <a href="https://wb96choi.github.io/hyein_bin/">Github</a>
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="contents-wrapper">
+                            <header>
+                                <button id="close"><i class="bi bi-x"></i></button>
+                            </header>
+                            <article>
+                                <div class="left-side">
+                                    <div class="thumbnail">
+                                        <img src="images/AppleiMac.png" alt="imac">
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="work-info">
+                                        <span>
+                                            <h2>프로젝트 333개요</h2>
+                                            <p>프로젝트 개요입니다.</p>
+                                        </span>
+                                        <span>
+                                            <h2>작업기간</h2>
+                                            <p>2022.8.23 ~ 2022.8.24</p>
+                                        </span>
+                                        <span>
+                                            <h2>작업기여도</h2>
+                                            <p>기여도 100% (개인작업)</p>
+                                        </span>
+                                        <span>
+                                            <h2>사용기술</h2>
+                                            <p>HTML CSS Javascript jQuery Photoshop</p>
+                                        </span>
+                                    </div>
+                                    <div class="detail-btn-group">
+                                        <button id="readme">
+                                            <a href="https://github.com/wb96choi/hyein_bin">README</a>
+
+                                        </button>
+                                        <button id="gotogit">
+                                            <a href="https://wb96choi.github.io/hyein_bin/">Github</a>
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="navigator-group">
+                    <button id="prev">좌</button>
+                    <button id="next">우</button>
+                </div>
+            </div>
+            <div class="work-contents pc-site">
                 <div class="container">
                     <div class="row">
                         <div class="con">
@@ -206,30 +349,7 @@
                     </div>
                 </div>
             </div>
-            <div class="work-contents responsive">
-                <div class="container">
-                    <div class="row">
-                        <div class="con">
 
-                            <div class="detail">
-                                자세히 보기
-                            </div>
-                        </div>
-                        <div class="con">
-
-                            <div class="detail">
-                                자세히 보기
-                            </div>
-                        </div>
-                        <div class="con">
-
-                            <div class="detail">
-                                자세히 보기
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="work-contents etc-site">
                 <div class="container">
                     <div class="row">
@@ -288,11 +408,11 @@
                             <div class="detail-btn-group">
                                 <button id="readme">
                                     <a href="https://github.com/wb96choi/hyein_bin">README</a>
-                                    
+
                                 </button>
                                 <button id="gotogit">
                                     <a href="https://wb96choi.github.io/hyein_bin/">Github</a>
-                                    
+
                                 </button>
                             </div>
                         </div>
@@ -306,17 +426,38 @@
 
 
         <section id="Contact">
-            
-                <!-- particles.js container -->
-                <div id="particles-js"></div> <!-- stats - count particles -->
-            
+
+            <!-- particles.js container -->
+            <div id="particles-js"></div> <!-- stats - count particles -->
+
+            <div class="thx">
+                <h3>방문해 주셔서 감사합니다.</h3>
+                <h1>꿈꿔왔던 모든 상상을 실현시키겠습니다.</h1>
+            </div>
+
+            <div class="contact-way">
+                <a href="tel:01044601280">
+                    <div class="text">tel.</div>
+                    <div class="text-hidden">전화문의</div>
+                </a>
+                <a href="mailto:choi44601280@gmail.com">
+                    <div class="text">E-mail.</div>
+                    <div class="text-hidden">메일문의</div>
+                </a>
+                <a href="https://open.kakao.com/o/sVpp8Gxe">
+                    <div class="text">Kakao.</div>
+                    <div class="text-hidden">오픈채팅</div>
+                </a>
+                <a href="https://github.com/wb96choi"><img class="github" src="images/github.svg" alt="Github"></a>
+            </div>
 
 
 
 
 
 
-            <a href="tel:01044601280">010-4460-1280</a>
+
+
             <!-- <canvas id="canvas" width="700" height="400" style="border:1px solid black"></canvas> -->
         </section>
         <!--Contact 섹션-->
