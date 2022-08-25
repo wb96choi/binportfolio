@@ -13,7 +13,9 @@ html {
     cursor: none;
 }
 
-body {}
+body {
+    background-image: linear-gradient(0deg,  rgba(44,83,131,1) 18.9%, rgba(95,175,201,1) 91.1% );
+}
 
 ul {
     list-style-type: none;
@@ -89,7 +91,7 @@ button {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: transparent;
     
     z-index: -1;
 }
@@ -127,3 +129,4 @@ button {
     transition: .5s;
     transform: translateX(-20%);
 }
+

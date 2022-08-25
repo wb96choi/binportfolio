@@ -32,7 +32,7 @@
 
 #main-header.on {
     height: 70px;
-    background-color: #CEFFAF;
+    background-color: rgba(95,175,201,1);
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
     /* 헤더 로고 */
@@ -71,7 +71,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: #FCFFE7;
+    /* background-color: #FCFFE7; */
 
     background-image: url('../images/profile.jpeg');
     background-size: cover;
@@ -107,7 +107,8 @@
 #About {
     width: 100vw;
     height: 200vh;
-    background-color: #CEFFAF;
+    /* background-color: #CEFFAF; */
+    background-color: transparent;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -126,7 +127,8 @@
 }
 
 .mask-color-filter {
-    background-color: #CEFFAF;
+    /* background-color: #CEFFAF; */
+    background-color: transparent;
 }
 
 .profile-clip {
@@ -199,7 +201,8 @@
 #Work {
     width: 100vw;
     height: 100vh;
-    background-color: #C9FFF5;
+    /* background-color: #C9FFF5; */
+    background-color: transparent;
     display: flex;
     align-items: center;
     position: relative;
@@ -508,7 +511,7 @@
 #Contact {
     width: 100vw;
     height: 100vh;
-    border: 30px solid pink;
+    /* border: 30px solid pink; */
     position: relative;
     /* z-index: 1; */
     /* background-image: url('../4907157.jpg');
@@ -576,6 +579,7 @@
     left: 0;
 }#Contact .contact-way a .text-hidden {
     display: none;
+    font-family: 'Gowun Batang', serif;
 }
 
 

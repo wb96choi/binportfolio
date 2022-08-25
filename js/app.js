@@ -312,7 +312,7 @@ $(function () {
                 }
             },
             "color": {
-                "value": "#000"
+                "value": "#00ffff"
             },
             "shape": {
                 "type": "circle",
