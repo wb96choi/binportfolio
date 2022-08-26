@@ -122,6 +122,24 @@ $(function () {
 });
 
 
+// about second floor 프로그레스바 
+$(function(){
+    function showProgress(){
+        $('.progress').circleProgress({
+        value: 0.75,
+        size: 50,
+        fill: {
+          gradient: ["red", "orange"]
+        }
+      });
+    };
+
+    $('.progress').hover(function(){
+        showProgress();
+    });
+    
+});
+
 
 
 // work 섹션 탭버튼

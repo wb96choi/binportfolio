@@ -32,15 +32,17 @@
 
 #main-header.on {
     height: 70px;
-    background-color: rgba(95,175,201,1);
+    background-color: rgba(95, 175, 201, 1);
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
-    /* 헤더 로고 */
+
+/* 헤더 로고 */
 #main-header .logo {
     font-family: 'Gowun Batang', serif;
     text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7);
 }
-    /* 헤더 메뉴 */
+
+/* 헤더 메뉴 */
 #main-header nav #menu {
     display: flex;
     font-family: 'Josefin Sans', sans-serif;
@@ -140,7 +142,7 @@
     background-attachment: fixed;
     background-position: left;
 
-    clip-path: circle(27% at 60% 50%);
+    clip-path: circle(27% at 53% 50%);
 }
 
 #About .first-floor .intro {
@@ -151,7 +153,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: right;
+    text-align: left;
 }
 
 #About .first-floor .intro header {
@@ -163,34 +165,85 @@
 #About .first-floor .intro p {
     font-size: 2rem;
 }
-    /* 2층 */
+
+/* 2층 */
 #About .second-floor {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
-    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
 }
 
-#About .second-floor .skill-title {
-    width: 40vw;
-    display: flex;
-    flex-direction: column;
-}
-
-#About .second-floor .skill-title ul {
-    width: 100%;
-    display: flex;
-}
-
-#About .second-floor .skill-title ul li img {
-    width: 50px;
-}
-
-#About .second-floor .skill {
+#About .second-floor .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 30px;
+    width: 60vw;
+    height: 100vh;
+    padding: 200px 0;
+}
+
+#About .second-floor .container .skill-title {
+    width: 100%;
+    height: 10vh;
+    background-color: #fff;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+#About .second-floor .container .skill {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#About .second-floor .container .skill li {
+    width: 20%;
+    height: 45vh;
+    padding: 20px;
+    outline: 2px solid black;
+}
+
+#About .second-floor .container .skill li header {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    outline: 2px solid black;
+}
+
+#About .second-floor .container .skill li .skill-icon {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#About .second-floor .container .skill li .skill-icon img {
+    width: 100%;
+    display: block;
+}
+
+#About .second-floor .container .skill li .skill-icon .progress {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: purple;
+}
+
+
+#About .second-floor .container .skill li .skill-name {
+    width: 100%;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+#About .second-floor .container .skill li .skill-info {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 20px;
 }
 
 
@@ -207,7 +260,8 @@
     align-items: center;
     position: relative;
 }
-    /* 워크섹션 네비게이터 */
+
+/* 워크섹션 네비게이터 */
 #Work .work-list {
     width: 20vw;
     height: 40%;
@@ -244,7 +298,8 @@
 #Work .work-list>li.on {
     color: red;
 }
-    /* 워크섹션 작업물  */
+
+/* 워크섹션 작업물  */
 #Work .work-contents {
     position: absolute;
     top: 0;
@@ -278,13 +333,15 @@
     width: 100%;
     position: relative;
 }
+
 #Work .work-contents .container .row {
     width: 100%;
     /* display: flex;
     justify-content: space-between;
     align-items: center; */
 }
-    /* 상세보기 레이아웃 */
+
+/* 상세보기 레이아웃 */
 #contents-wrapper {
     position: absolute;
     top: 0;
@@ -294,6 +351,7 @@
     background-color: #fff;
     z-index: 10;
 }
+
 #contents-wrapper header {
     width: 100%;
     height: 70px;
@@ -395,7 +453,7 @@
     display: block;
 }
 
-    /* 모달창------- */
+/* 모달창------- */
 .modal-shadow {
     position: absolute;
     width: 100vw;
@@ -551,10 +609,12 @@
     gap: 10rem;
     text-align: center;
 }
+
 #Contact .contact-way a {
     position: relative;
     width: 10vw;
 }
+
 #Contact .contact-way a:after {
     display: block;
     content: '';
@@ -563,34 +623,27 @@
     transform: scaleX(0);
     transition: transform .5s ease-in-out;
 }
-#Contact .contact-way a:last-child:after{
+
+#Contact .contact-way a:last-child:after {
     display: none;
 }
-#Contact .contact-way > a:hover:after {
+
+#Contact .contact-way>a:hover:after {
     transform: scaleX(1);
 }
-#Contact .contact-way > a:after {
+
+#Contact .contact-way>a:after {
     transform-origin: 0% 50%;
 }
+
 #Contact .contact-way a div {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-}#Contact .contact-way a .text-hidden {
+}
+
+#Contact .contact-way a .text-hidden {
     display: none;
     font-family: 'Gowun Batang', serif;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
