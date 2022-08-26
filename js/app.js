@@ -34,15 +34,12 @@ $(function () {
         var scrollposition = $(window).scrollTop();
         var scrollposition_bottom = $(document).height() - $(window).height() - $(window).scrollTop();
 
-        console.log(scrollposition);
-        console.log(scrollposition_bottom);
 
         let Homesection = document.querySelector("#Home").offsetTop;
         let Aboutsection = document.querySelector("#About").offsetTop;
         let Worksection = document.querySelector("#Work").offsetTop;
         let Contactsection = document.querySelector("#Contact").offsetTop;
-        console.log(Worksection);
-        console.log(Aboutsection);
+        
 
         // 530 이 넘으면 헤더가
         if (scrollposition >= 530) {
@@ -56,7 +53,7 @@ $(function () {
         }
 
 
-        // 섹션위치에따라 색이 변해요
+        // 섹션위치에따라 네비게이터색이 변해요
         // home
         $(window).on('scroll', function () {
             if (scrollposition < Aboutsection) {
@@ -74,6 +71,7 @@ $(function () {
                 $('.idc-about').removeClass('on');
             };
         });
+        
         // work
         $(window).on('scroll', function () {
             if (Worksection <= scrollposition + 10) {
@@ -104,9 +102,10 @@ $(function () {
     $('#toggle-menu-btn').click(function () {
         $('#toggle-menu-btn').toggleClass('active');
         $('#mobile-toggle-menu').toggleClass('on');
-    })
+    });
 });
 
+// typeit
 $(function () {
     new TypeIt("#Home article header h1", {
         strings: "뜨거운 웹퍼블리셔는",
@@ -127,7 +126,9 @@ $(function(){
     function showProgress(){
         $('.progress').circleProgress({
         value: 0.75,
+        startAngle: -Math.PI/2,
         size: 50,
+        thickness:10,
         fill: {
           gradient: ["red", "orange"]
         }
