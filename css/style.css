@@ -58,8 +58,8 @@ button {
 }
 
 #readme {
-    width: 200px;
-    height: 30px;
+    width: 8vw;
+    height: 4vh;
     background-color: #ccc;
     border-radius: 10px;
 }
@@ -71,8 +71,8 @@ button {
 }
 
 #gotogit {
-    width: 200px;
-    height: 30px;
+    width: 8vw;
+    height: 4vh;
     background-color: #ccc;
     border-radius: 10px;
 }
@@ -126,11 +126,19 @@ button {
 
 
 
-#swiper-btn {
+#swiper-btn-left {
+    padding: 20px;
     color: pink;
 }
-#swiper-btn:hover {
+#swiper-btn-left:hover {
     transition: .5s;
     transform: translateX(-20%);
+}
+#swiper-btn-right {
+    color: pink;
+}
+#swiper-btn-right:hover {
+    transition: .5s;
+    transform: translateX(20%);
 }
 

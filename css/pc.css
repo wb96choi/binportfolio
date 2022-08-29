@@ -142,7 +142,7 @@
     background-attachment: fixed;
     background-position: left;
 
-    clip-path: circle(27% at 53% 50%);
+    clip-path: circle(27% at 56% 50%);
 }
 
 #About .first-floor .intro {
@@ -401,7 +401,9 @@
 #Work .work-contents .container .row {
     width: 50vw;
     height: 50vh;
-    outline: 1px solid red;
+
+    /* outline: 1px solid red; */
+    overflow: hidden;
 }
 
 
@@ -412,6 +414,8 @@
     left: 0;
     width: 50vw;
     height: 50vh;
+    border: 3px solid black;
+    border-radius: 15px;
     background-color: #fff;
     z-index: 10;
 }
@@ -478,11 +482,14 @@
 }
 
 #contents-wrapper article .right-side .work-info span h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
 }
 
 #contents-wrapper article .right-side .work-info span p {
     white-space: nowrap;
+    margin-left: 10px;
 }
 
 #contents-wrapper article .right-side .detail-btn-group {
