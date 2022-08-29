@@ -143,6 +143,7 @@ $(function () {
     $('.progress').mouseenter(function () {
         showProgress();
     });
+    
 
 });
 
