@@ -32,14 +32,15 @@
 
 #main-header.on {
     height: 70px;
-    background-color: rgba(95, 175, 201, 1);
+    /* background-color: rgba(95, 175, 201, 1); */
+    background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* 헤더 로고 */
 #main-header .logo {
     font-family: 'Gowun Batang', serif;
-    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7);
+    text-shadow: -2px -2px 2px rgba(255, 255, 255, 0.7);
 }
 
 /* 헤더 메뉴 */
@@ -47,18 +48,19 @@
     display: flex;
     font-family: 'Josefin Sans', sans-serif;
     gap: 2vw;
+    text-shadow: 2px 2px 2px  rgba(255, 255, 255, 0.7);
 }
 
 #main-header nav #menu li.on {
     /* color: pink; */
 
     /* background-image: url('../images/profile.jpeg'); */
-    background: linear-gradient(blue, pink);
-    background-repeat: repeat-y;
+    /* background: linear-gradient(blue, pink); */
+    /* background-repeat: repeat-y;
     background-size: cover;
     background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    -webkit-background-clip: text; */
+    color: var(--main-color);
 }
 
 #main-header #toggle-menu-btn,
@@ -109,7 +111,6 @@
 #About {
     width: 100vw;
     height: 200vh;
-    /* background-color: #CEFFAF; */
     background-color: transparent;
     position: relative;
     display: flex;
@@ -167,7 +168,7 @@
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: var(--main-color);
 }
 #About .first-floor .intro h2 {
     font-size: 3rem;
@@ -190,8 +191,8 @@
     top: 20vh;
     right: 0;
     width: 40vw;
-    height: 10vh;
-    background-color: #fff;
+    height: 40px;
+    background-color: var(--main-color);
 }
 
 #About .second-floor .bar-deco-left{
@@ -199,8 +200,8 @@
     left: 0;
     bottom: 5vh;
     width: 70vw;
-    height: 10vh;
-    background-color: #000;
+    height: 40px;
+    background-color: var(--main-color);
 }
 
 #About .second-floor .container {
@@ -289,7 +290,7 @@
     width: 60%;
     height: 100%;
 
-    border-bottom: 10px solid black;
+    border-bottom: 5px solid var(--main-color);
 }
 #About .second-floor .container .skill li .skill-info {
     width: 100%;
@@ -305,7 +306,7 @@
     width: 30%;
     height: 100%;
 
-    border-bottom: 10px solid black;
+    border-bottom: 5px solid var(--main-color);
 
 }
 
@@ -328,12 +329,15 @@
 /* 워크섹션 네비게이터 */
 #Work .work-list {
     width: 20vw;
-    height: 40%;
+    height: 80%;
+    padding: 17vh 0 ;
     font-size: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border-right: 3px solid var(--main-color);
+    /* box-shadow: 10px 0 5px var(--main-color); */
 }
 
 #Work .work-list>li {
@@ -345,7 +349,7 @@
 #Work .work-list>li:after {
     display: block;
     content: '';
-    border-bottom: solid 3px #ea2129;
+    border-bottom: solid 3px var(--main-color);
     transform: scaleX(0);
     transition: transform .5s ease-in-out;
 }
@@ -360,7 +364,7 @@
 }
 
 #Work .work-list>li.on {
-    color: red;
+    color: var(--main-color);
 }
 
 /* 워크섹션 작업물  */
@@ -393,7 +397,7 @@
 }
 
 #Work .work-contents .container {
-    margin-top: 150px;
+    margin-top: 25vh;
     width: 100%;
     position: relative;
 }
@@ -414,7 +418,7 @@
     left: 0;
     width: 50vw;
     height: 50vh;
-    border: 3px solid black;
+    border: 1.5px solid var(--main-color);
     border-radius: 15px;
     background-color: #fff;
     z-index: 10;
@@ -500,30 +504,6 @@
 }
 
 
-#Work .work-contents .con {
-    width: 20vw;
-    height: 40vh;
-    outline: 2px solid red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#Work .work-contents .con .detail {
-    width: 100%;
-    display: none;
-    text-align: center;
-    font-size: 2rem;
-}
-
-#Work .work-contents .con:hover {
-    background-color: rgba(0, 0, 0, 0.406);
-}
-
-#Work .work-contents .con:hover .detail {
-    display: block;
-}
-
 /* 모달창------- */
 .modal-shadow {
     position: absolute;
@@ -531,7 +511,7 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
-    z-index: 9;
+    z-index: 10;
 }
 
 .modal-shadow.on {
@@ -617,7 +597,7 @@
     display: block;
     content: '';
     margin-top: 4rem;
-    border-bottom: solid 3px #000;
+    border-bottom: solid 3px var(--main-color);
     transform: scaleX(0);
     transition: transform .5s ease-in-out;
 }
@@ -639,9 +619,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    font-family: 'Gowun Batang', serif;
 }
 
 #Contact .contact-way a .text-hidden {
     display: none;
     font-family: 'Gowun Batang', serif;
+    color: var(--main-color);
 }

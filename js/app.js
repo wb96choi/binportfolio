@@ -135,7 +135,7 @@ $(function () {
             size: 50,
             thickness: 10,
             fill: {
-                gradient: ["red", "orange"]
+                color : '#ffc0cb'
             }
         });
     };
@@ -196,7 +196,7 @@ $(function () {
         coverflowEffect: {
             rotate: 0,
             stretch: 80,
-            depth: 200,
+            depth: 500,
             modifier: 1,
             slideShadows: false,
         },
@@ -336,7 +336,7 @@ $(function () {
                 }
             },
             "color": {
-                "value": "#00ffff"
+                "value": "#ffc0cb"
             },
             "shape": {
                 "type": "circle",
