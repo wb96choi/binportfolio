@@ -135,7 +135,7 @@ $(function(){
       });
     };
 
-    $('.progress').hover(function(){
+    $('.progress').mouseenter(function(){
         showProgress();
     });
     
@@ -181,28 +181,28 @@ $(function () {
 
 // work 섹션 이미지 슬라이드
 $(function () {
-    $(function () {
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            spaceBetween: 50,
-
-        });
-
-    });
+    var mySwiper = new Swiper('.swiper', {
+        loop: true,
+        speed: 1000,
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 80,
+            depth: 200,
+            modifier: 1,
+            slideShadows: false,
+        },
+    
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    
+    })
 
 });
 
@@ -211,8 +211,8 @@ $(function () {
     $('#Work .work-contents .con').click(function () {
         $('.modal-shadow').addClass('on');
     });
-    $('#work-modal #close').click(function () {
-        $('.modal-shadow').removeClass('on');
+    $('#Work .work-contents #contents-wrapper article .detail-btn-group #readme').click(function () {
+        $('.modal-shadow').addClass('on');
     });
     // 바깥클릭시 모달창 꺼짐
     $('.modal-shadow').click(function (e) {

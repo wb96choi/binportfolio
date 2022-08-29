@@ -146,22 +146,32 @@
 }
 
 #About .first-floor .intro {
-    width: 100vw;
+    width: 50vw;
     height: 100vh;
     /* outline: 2px solid red; */
     color: #000;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: space-between; */
     text-align: left;
+    padding: 20vh 2vw;
 }
-
-#About .first-floor .intro header {
-    font-size: 4rem;
-    margin-bottom: 20px;
-
+#About .first-floor .intro section {
+    width: 70%;
+    position: relative;
+    padding-bottom: 40px;
+    padding-top: 20px;
 }
-
+#About .first-floor .intro section .section-highlighter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+#About .first-floor .intro h2 {
+    font-size: 3rem;
+}
 #About .first-floor .intro p {
     font-size: 2rem;
 }
@@ -439,7 +449,7 @@
 #contents-wrapper article .left-side .thumbnail {
     width: 80%;
     height: 100%;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 #contents-wrapper article .left-side .thumbnail img {
@@ -523,90 +533,17 @@
 
 #work-modal {
     position: absolute;
-    top: 50%;
-    left: 15%;
+    top: 100px;
+    left: 50%;
     transform: translateX(-50%);
-    transform: translateY(-50%);
     width: 70vw;
-    height: 70vh;
+    height: calc(100vh - 100px);
     background-color: #fff;
     z-index: 10;
+    overflow-y: scroll;
 }
 
-#work-modal header {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
 
-#close {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    font-size: 50px;
-}
-
-#work-modal article {
-    display: flex;
-    width: 100%;
-    height: calc(100% - 70px);
-}
-
-#work-modal article .left-side {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#work-modal article .left-side .thumbnail {
-    width: 80%;
-    height: 100%;
-    outline: 1px solid red;
-}
-
-#work-modal article .left-side .thumbnail img {
-    margin: 0 auto;
-    width: 80%;
-    display: block;
-}
-
-#work-modal article .right-side {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#work-modal article .right-side .work-info {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#work-modal article .right-side .work-info span {
-    font-size: 1.5rem;
-}
-
-#work-modal article .right-side .work-info span h2 {
-    font-size: 2.5rem;
-}
-
-#work-modal article .right-side .work-info span p {
-    white-space: nowrap;
-}
-
-#work-modal article .right-side .detail-btn-group {
-    width: 100%;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-}
 
 
 
