@@ -399,19 +399,19 @@
 }
 
 #Work .work-contents .container .row {
-    width: 100%;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
+    width: 50vw;
+    height: 50vh;
+    outline: 1px solid red;
 }
+
 
 /* 상세보기 레이아웃 */
 #contents-wrapper {
     position: absolute;
     top: 0;
     left: 0;
-    width: 70vw;
-    height: 70vh;
+    width: 50vw;
+    height: 50vh;
     background-color: #fff;
     z-index: 10;
 }
