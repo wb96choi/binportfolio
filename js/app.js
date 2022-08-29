@@ -31,15 +31,17 @@ $(function () {
 $(function () {
     $(window).scroll(function () {
         // scrollposition이 현재 스크롤 좌표임
-        var scrollposition = $(window).scrollTop();
-        var scrollposition_bottom = $(document).height() - $(window).height() - $(window).scrollTop();
-
-
+        let scrollposition = $(window).scrollTop();
         let Homesection = document.querySelector("#Home").offsetTop;
         let Aboutsection = document.querySelector("#About").offsetTop;
         let Worksection = document.querySelector("#Work").offsetTop;
         let Contactsection = document.querySelector("#Contact").offsetTop;
         
+        let scrollposition_bottom = $(window).scrollTop() + $(window).height();
+        
+
+
+
 
         // 530 이 넘으면 헤더가
         if (scrollposition >= 530) {
@@ -58,6 +60,7 @@ $(function () {
         $(window).on('scroll', function () {
             if (scrollposition < Aboutsection) {
                 $('.idc-home').addClass('on');
+                $('.idc-contact').removeClass('on');
             } else {
                 $('.idc-home').removeClass('on');
             };
@@ -67,24 +70,26 @@ $(function () {
             if (Aboutsection <= scrollposition + 1) {
                 $('.idc-about').addClass('on');
                 $('.idc-home').removeClass('on');
+                $('.idc-contact').removeClass('on');
             } else {
                 $('.idc-about').removeClass('on');
             };
         });
-        
+
         // work
         $(window).on('scroll', function () {
-            if (Worksection <= scrollposition + 10) {
+            if (Worksection <= scrollposition ) {
                 $('.idc-work').addClass('on');
                 $('.idc-about').removeClass('on');
+                $('.idc-contact').removeClass('on');
             } else {
                 $('.idc-work').removeClass('on');
             };
         });
         // contact
         $(window).on('scroll', function () {
-            // 2900 = Contactsection
-            if (2900 <= scrollposition) {
+            
+            if ($(document).height() <= scrollposition_bottom + 200) {
                 $('.idc-contact').addClass('on');
                 $('.idc-work').removeClass('on');
             } else {
@@ -92,7 +97,7 @@ $(function () {
             };
         });
 
-
+        console.log(scrollposition_bottom,$(document).height());
     });
 });
 
@@ -122,23 +127,23 @@ $(function () {
 
 
 // about second floor 프로그레스바 
-$(function(){
-    function showProgress(){
+$(function () {
+    function showProgress() {
         $('.progress').circleProgress({
-        value: 0.75,
-        startAngle: -Math.PI/2,
-        size: 50,
-        thickness:10,
-        fill: {
-          gradient: ["red", "orange"]
-        }
-      });
+            value: 0.75,
+            startAngle: -Math.PI / 2,
+            size: 50,
+            thickness: 10,
+            fill: {
+                gradient: ["red", "orange"]
+            }
+        });
     };
 
-    $('.progress').mouseenter(function(){
+    $('.progress').mouseenter(function () {
         showProgress();
     });
-    
+
 });
 
 
@@ -195,13 +200,13 @@ $(function () {
             modifier: 1,
             slideShadows: false,
         },
-    
+
         // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-    
+
     })
 
 });
