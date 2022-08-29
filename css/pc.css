@@ -233,7 +233,7 @@
     height: 45vh;
     border-radius: 15px;
     padding: 20px ;
-    background-color: #ccc;
+    background-color: #f1f1f1;
 }
 
 #About .second-floor .container .skill li header {
@@ -324,19 +324,23 @@
     display: flex;
     align-items: center;
     position: relative;
+/* 
+    border: 1px dotted var(--main-color);
+    border-left: none;
+    border-right: none; */
 }
 
 /* 워크섹션 네비게이터 */
 #Work .work-list {
     width: 20vw;
-    height: 80%;
-    padding: 17vh 0 ;
+    height: 100%;
+    padding: 25vh 0 ;
     font-size: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-right: 3px solid var(--main-color);
+    /* background-color: var(--main-color); */
     /* box-shadow: 10px 0 5px var(--main-color); */
 }
 
@@ -344,12 +348,13 @@
     width: 10vw;
     height: auto;
     transition: 0.5s;
+    color: #000;
 }
 
 #Work .work-list>li:after {
     display: block;
     content: '';
-    border-bottom: solid 3px var(--main-color);
+    border-bottom: solid 3px #000;
     transform: scaleX(0);
     transition: transform .5s ease-in-out;
 }
@@ -364,7 +369,7 @@
 }
 
 #Work .work-list>li.on {
-    color: var(--main-color);
+    color: #000;
 }
 
 /* 워크섹션 작업물  */
@@ -382,6 +387,10 @@
     flex-direction: column;
     justify-content: space-between;
     transition: 0.5s;
+    /* border: 20px solid var(--main-color); */
+    border-left: none;
+    border-right: none;
+    background-color: var(--main-color);
 }
 
 #Work .work-contents.hide {
