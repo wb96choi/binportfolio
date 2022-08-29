@@ -198,7 +198,7 @@
 #About .second-floor .bar-deco-left{
     position: absolute;
     left: 0;
-    bottom: 5vh;
+    bottom: 8vh;
     width: 70vw;
     height: 40px;
     background-color: var(--main-color);
