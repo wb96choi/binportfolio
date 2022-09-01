@@ -32,9 +32,9 @@
 
 #main-header.on {
     height: 70px;
-    /* background-color: rgba(95, 175, 201, 1); */
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 5px 5px 1px rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    /* box-shadow: 0 5px 5px 1px rgba(255, 255, 255, 0.7); */
 }
 
 /* 헤더 로고 */
@@ -46,7 +46,8 @@
 /* 헤더 메뉴 */
 #main-header nav #menu {
     display: flex;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Gowun Batang', serif;
+    font-weight: bold;
     gap: 2vw;
     /* text-shadow: 2px 2px 2px  rgba(255, 255, 255, 0.7); */
 }
@@ -186,7 +187,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: #f1f1f1;
+    background-color: #f3f3f3;
 }
 .second-floor .bar-deco-right {
     position: absolute;
@@ -195,6 +196,7 @@
     width: 40vw;
     height: 40px;
     background-color: #fff;
+    display: none;
 }
 
 .second-floor .bar-deco-left{
@@ -219,6 +221,7 @@
     height: 10vh;
     font-size: 3rem;
     display: flex;
+    gap: 1vw;
     align-items: center;
     position: relative;
 }
@@ -235,7 +238,7 @@
     height: 45vh;
     border-radius: 15px;
     padding: 20px ;
-    background-color: #ddd;
+    background-color: #fff;
 }
 
 .second-floor .container .skill li header {
@@ -325,15 +328,21 @@
     height: 100vh;
     /* background-color: #C9FFF5; */
     background-color: transparent;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    border-bottom: 7vh solid var(--main-color);
-/* 
-    border: 1px dotted var(--main-color);
-    border-left: none;
-    border-right: none; */
+
+    border-bottom: 1px dotted var(--main-color);
+}
+#Work .work_bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: radial-gradient( var(--main-color) -150%, transparent 80% );
 }
 
 /* 워크섹션 네비게이터 */
@@ -388,24 +397,28 @@
 #Work .work-contents {
     position: absolute;
     width: 70vw;
+    height: 100vh;
     top: 0;
-    margin: 0 auto;
     transition: 0.5s;
     opacity: 0;
     display: flex;
     flex-direction: column;
 }
-#swiper-btn-left {  
+#swiper-btn-left {
+    margin-top: 35vh;
+    margin-left: 25vw;
     padding: 20px;
-    color: pink;
+    color: var(--main-color);
 }
 #swiper-btn-left:hover {
     transition: .5s;
     transform: translateX(-20%);
 }
 #swiper-btn-right {
+    margin-top: 35vh;
+    margin-right: 25vw;
     padding: 20px;
-    color: pink;
+    color: var(--main-color);
 }
 #swiper-btn-right:hover {
     transition: .5s;
@@ -433,9 +446,6 @@
 #Work .work-contents .container .row {
     width: 50vw;
     height: 50vh;
-
-    /* outline: 1px solid red; */
-    overflow: hidden;
 }
 
 

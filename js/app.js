@@ -15,7 +15,7 @@ $(function () {
     // 클릭 가능한 곳에 호버링을 하면
     $('#main-header nav #menu > li, #mobile-toggle-menu .gnb > li, #Work .work-list > li, #Work .work-contents .con, #close, #readme, #gotogit, #Contact .contact-way > a').mouseenter(function () {
         $('.mousepointer').css(
-            'transform', 'scale(5)'
+            'transform', 'scale(7)'
         );
     });
     $('#main-header nav #menu > li, #mobile-toggle-menu .gnb > li, #Work .work-list > li, #Work .work-contents .con, #close, #readme, #gotogit, #Contact .contact-way > a').mouseleave(function () {
@@ -39,8 +39,6 @@ $(function () {
         // let Contactsection = document.querySelector("#Contact").offsetTop;
 
         let scrollposition_bottom = $(window).scrollTop() + $(window).height();
-
-
 
 
 
@@ -98,6 +96,89 @@ $(function () {
             };
         });
 
+
+
+        // about second floor 프로그레스바 
+        let Skillsection = document.querySelector(".second-floor").offsetTop;
+        
+        function showProgress() {
+            // html
+            $('.prog-html').circleProgress({
+                value: 0.9,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 10,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+            // css
+            $('.prog-css').circleProgress({
+                value: 0.85,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 10,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+            // javascript
+            $('.prog-js').circleProgress({
+                value: 0.85,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 10,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+            // jquery
+            $('.prog-jq').circleProgress({
+                value: 0.85,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 10,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+            // Figma
+            $('.prog-figma').circleProgress({
+                value: 0.7,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 10,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+            // photoshop
+            $('.prog-ps').circleProgress({
+                value: 0.9,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 10,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+            // Figma
+            $('.prog-illust').circleProgress({
+                value: 0.75,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 10,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+
+        };
+
+        if (scrollposition <= Skillsection) {
+            showProgress();
+        }
+
     });
 });
 
@@ -129,8 +210,14 @@ $(function () {
 
 // about second floor 프로그레스바 
 $(function () {
+    let Skillsection = $('.second-floor').offsetTop;
+    console.log(Skillsection);
+    let scrollposition = $(window).scrollTop();
+
+
     function showProgress() {
         // html
+
         $('.prog-html').circleProgress({
             value: 0.9,
             startAngle: -Math.PI / 2,
@@ -200,12 +287,15 @@ $(function () {
                 color: '#ffc0cb'
             }
         });
+
     };
 
-    $('.progress').mouseenter(function () {
+    // $('.progress').mouseenter(function () {
+    //     showProgress();
+    // });
+    if (scrollposition >= Skillsection) {
         showProgress();
-    });
-
+    }
 
 });
 
@@ -250,19 +340,20 @@ $(function () {
 // work 섹션 이미지 슬라이드
 $(function () {
     var mySwiper = new Swiper('.swiper', {
-        loop: true,
+        loop: false,
         speed: 1000,
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
         coverflowEffect: {
-            rotate: 0,
+            rotate: 50,
             stretch: 80,
             depth: 500,
             modifier: 1,
             slideShadows: false,
         },
+        slideToClickedSlide: true,
 
         // Navigation arrows
         navigation: {
