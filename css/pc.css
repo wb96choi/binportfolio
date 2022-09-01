@@ -342,7 +342,7 @@
     height: 100vh;
     top: 0;
     left: 0;
-    background: radial-gradient( var(--main-color) -150%, transparent 80% );
+    /* background: radial-gradient( var(--main-color) -150%, transparent 80% ); */
 }
 
 /* 워크섹션 네비게이터 */
