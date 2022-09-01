@@ -1,6 +1,6 @@
 // AOS 시작
 $(function () {
-    AOS.init();    
+    AOS.init();
 });
 
 
@@ -37,9 +37,9 @@ $(function () {
         let Aboutsection = document.querySelector("#About").offsetTop;
         let Worksection = document.querySelector("#Work").offsetTop;
         // let Contactsection = document.querySelector("#Contact").offsetTop;
-        
+
         let scrollposition_bottom = $(window).scrollTop() + $(window).height();
-        
+
 
 
 
@@ -79,7 +79,7 @@ $(function () {
 
         // work
         $(window).on('scroll', function () {
-            if (Worksection <= scrollposition ) {
+            if (Worksection <= scrollposition) {
                 $('.idc-work').addClass('on');
                 $('.idc-about').removeClass('on');
                 $('.idc-contact').removeClass('on');
@@ -89,7 +89,7 @@ $(function () {
         });
         // contact
         $(window).on('scroll', function () {
-            
+
             if ($(document).height() <= scrollposition_bottom + 200) {
                 $('.idc-contact').addClass('on');
                 $('.idc-work').removeClass('on');
@@ -137,7 +137,7 @@ $(function () {
             size: 50,
             thickness: 10,
             fill: {
-                color : '#ffc0cb'
+                color: '#ffc0cb'
             }
         });
         // css
@@ -147,7 +147,7 @@ $(function () {
             size: 50,
             thickness: 10,
             fill: {
-                color : '#ffc0cb'
+                color: '#ffc0cb'
             }
         });
         // javascript
@@ -157,7 +157,7 @@ $(function () {
             size: 50,
             thickness: 10,
             fill: {
-                color : '#ffc0cb'
+                color: '#ffc0cb'
             }
         });
         // jquery
@@ -167,7 +167,7 @@ $(function () {
             size: 50,
             thickness: 10,
             fill: {
-                color : '#ffc0cb'
+                color: '#ffc0cb'
             }
         });
         // Figma
@@ -177,7 +177,7 @@ $(function () {
             size: 50,
             thickness: 10,
             fill: {
-                color : '#ffc0cb'
+                color: '#ffc0cb'
             }
         });
         // photoshop
@@ -187,7 +187,7 @@ $(function () {
             size: 50,
             thickness: 10,
             fill: {
-                color : '#ffc0cb'
+                color: '#ffc0cb'
             }
         });
         // Figma
@@ -197,7 +197,7 @@ $(function () {
             size: 50,
             thickness: 10,
             fill: {
-                color : '#ffc0cb'
+                color: '#ffc0cb'
             }
         });
     };
@@ -205,7 +205,7 @@ $(function () {
     $('.progress').mouseenter(function () {
         showProgress();
     });
-    
+
 
 });
 
@@ -380,136 +380,6 @@ $(function () {
 
 
 
-
-
-
-
-
-
-
-// 파티클 배경
-$(function () {
-    particlesJS("particles-js", {
-        "particles": {
-            "number": {
-                "value": 303,
-                "density": {
-                    "enable": true,
-                    "value_area": 641.3648243462092
-                }
-            },
-            "color": {
-                "value": "#ffc0cb"
-            },
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                },
-                "polygon": {
-                    "nb_sides": 5
-                },
-                "image": {
-                    "src": "img/github.svg",
-                    "width": 100,
-                    "height": 100
-                }
-            },
-            "opacity": {
-                "value": 1,
-                "random": true,
-                "anim": {
-                    "enable": true,
-                    "speed": 1,
-                    "opacity_min": 0,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 5,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 4,
-                    "size_min": 0.3,
-                    "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": false,
-                "distance": 150,
-                "color": "#ffffff",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 1,
-                "direction": "none",
-                "random": true,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 600
-                }
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "bubble"
-                },
-                "onclick": {
-                    "enable": false,
-                    "mode": "repulse"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 400,
-                    "line_linked": {
-                        "opacity": 1
-                    }
-                },
-                "bubble": {
-                    "distance": 250,
-                    "size": 0,
-                    "duration": 2,
-                    "opacity": 0,
-                    "speed": 3
-                },
-                "repulse": {
-                    "distance": 400,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 4
-                },
-                "remove": {
-                    "particles_nb": 2
-                }
-            }
-        },
-        "retina_detect": true
-    });
-    var count_particles, update;
-
-    stats.setMode(0);
-    stats.domElement.style.position = 'absolute';
-    stats.domElement.style.left = '0px';
-    stats.domElement.style.top = '0px';
-    count_particles = document.querySelector('.js-count-particles');
-
-    requestAnimationFrame(update);;
-});
-
 // Contact-way 애니메이션
 $(function () {
     $('#Contact .contact-way > a').mouseenter(function () {
@@ -520,4 +390,31 @@ $(function () {
         $(this).find('.text').stop().fadeIn(500);
         $(this).find('.text-hidden').stop().fadeOut(500);
     });
+});
+
+
+
+
+
+
+
+
+
+
+
+// Contact 애니메이션
+$(function () {
+    $('#Contact').on("mousemove", function (event) {
+        var window_height = $('#Contact').height();
+        var window_width = $('#Contact').width();
+        var mouseXpos = event.clientX;
+        var mouseYpos = event.clientY;
+        var YrotateDeg = (window_width / 2 - mouseXpos) * -0.05;
+        var XrotateDeg = (window_height / 2 - mouseYpos) * 0.05;
+        $(".thx").css({
+            'transform': "rotateX(" + XrotateDeg + "deg) rotateY(" + YrotateDeg + "deg) translate(-50%, -50%)",
+            'transform-origin': 'left'
+        });
+    });
+
 });
