@@ -99,9 +99,9 @@
     right: 0;
     top: 40vh;
     width: 50vw;
-    height: 50vh;
+    height: 20vh;
     /* outline: 2px solid red; */
-    font-size: 5rem;
+    /* font-size: 5rem; */
     color: #fff;
 }
 
@@ -133,7 +133,7 @@
 .mask-color-filter {
     /* background-color: #CEFFAF; */
     background-color: transparent;
-    
+
 }
 
 .profile-clip {
@@ -159,12 +159,14 @@
     text-align: left;
     padding: 20vh 2vw;
 }
+
 #About .first-floor .intro section {
     width: 70%;
     position: relative;
     padding-bottom: 40px;
     padding-top: 20px;
 }
+
 #About .first-floor .intro section .section-highlighter {
     position: absolute;
     bottom: 0;
@@ -172,9 +174,11 @@
     height: 2px;
     background-color: var(--main-color);
 }
+
 #About .first-floor .intro h2 {
     font-size: 3rem;
 }
+
 #About .first-floor .intro p {
     font-size: 2rem;
 }
@@ -189,6 +193,7 @@
     position: relative;
     background-color: #f3f3f3;
 }
+
 .second-floor .bar-deco-right {
     position: absolute;
     top: 20vh;
@@ -199,7 +204,7 @@
     display: none;
 }
 
-.second-floor .bar-deco-left{
+.second-floor .bar-deco-left {
     position: absolute;
     left: 0;
     bottom: 8vh;
@@ -223,7 +228,6 @@
     display: flex;
     gap: 1vw;
     align-items: center;
-    position: relative;
 }
 
 .second-floor .container .skill {
@@ -237,7 +241,7 @@
     width: 20%;
     height: 45vh;
     border-radius: 15px;
-    padding: 20px ;
+    padding: 20px;
     background-color: #fff;
 }
 
@@ -272,6 +276,7 @@
     border-radius: 50%;
     background-color: #fff;
 }
+
 .second-floor .container .skill li .skill-icon .progress span {
     position: absolute;
     top: 0;
@@ -288,6 +293,7 @@
     position: relative;
 
 }
+
 .second-floor .container .skill li .skill-name:after {
     position: absolute;
     top: 0;
@@ -298,6 +304,7 @@
 
     border-bottom: 5px solid var(--main-color);
 }
+
 .second-floor .container .skill li .skill-info {
     width: 100%;
     height: 35%;
@@ -305,7 +312,8 @@
     margin-top: 20px;
     position: relative;
 }
-.second-floor .container .skill li .skill-info:after{
+
+.second-floor .container .skill li .skill-info:after {
     position: absolute;
     top: 10px;
     right: 0;
@@ -328,21 +336,25 @@
     height: 100vh;
     /* background-color: #C9FFF5; */
     background-color: transparent;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
 
-    border-bottom: 1px dotted var(--main-color);
+    /* border-bottom: 1px dotted var(--main-color); */
 }
+
 #Work .work_bg {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
     top: 0;
     left: 0;
-    /* background: radial-gradient( var(--main-color) -150%, transparent 80% ); */
+    width: 0;
+    height: 0;
+    border-bottom: 50vh solid transparent;
+    border-top: 50vh solid #f3f3f3;
+    border-left: 50vw solid #f3f3f3;
+    border-right: 50vw solid transparent;
 }
 
 /* 워크섹션 네비게이터 */
@@ -397,29 +409,33 @@
 #Work .work-contents {
     position: absolute;
     width: 70vw;
-    height: 100vh;
-    top: 0;
+    height: 80vh;
+    top: 20vh;
     transition: 0.5s;
     opacity: 0;
     display: flex;
     flex-direction: column;
 }
+
 #swiper-btn-left {
-    margin-top: 35vh;
+    margin-top: 25vh;
     margin-left: 25vw;
     padding: 20px;
     color: var(--main-color);
 }
+
 #swiper-btn-left:hover {
     transition: .5s;
     transform: translateX(-20%);
 }
+
 #swiper-btn-right {
-    margin-top: 35vh;
+    margin-top: 25vh;
     margin-right: 25vw;
     padding: 20px;
     color: var(--main-color);
 }
+
 #swiper-btn-right:hover {
     transition: .5s;
     transform: translateX(20%);
@@ -438,7 +454,7 @@
 }
 
 #Work .work-contents .container {
-    margin-top: 25vh;
+    margin-top: 10vh;
     width: 100%;
     position: relative;
 }
@@ -462,27 +478,11 @@
     z-index: 9;
 }
 
-
-#contents-wrapper header {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
-
-#contents-wrapper header #close {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    font-size: 50px;
-    display: none;
-}
-
 #contents-wrapper article {
     display: flex;
     width: 100%;
-    height: calc(100% - 70px);
+    height: 100%;
+    padding-top: 70px;
 }
 
 #contents-wrapper article .left-side {
@@ -541,7 +541,31 @@
     display: flex;
     justify-content: space-between;
 }
+#readme {
+    width: 8vw;
+    height: 4vh;
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+#readme a {
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    display: block;
+}
 
+#gotogit {
+    width: 8vw;
+    height: 4vh;
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+#gotogit a {
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    display: block;
+}
 
 /* 모달창------- */
 .modal-shadow {
@@ -570,7 +594,9 @@
     z-index: 10;
     overflow-y: scroll;
 }
+
 #work-modal img {
+    width: 100%;
     display: none;
 }
 

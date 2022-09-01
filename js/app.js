@@ -26,7 +26,22 @@ $(function () {
 
 });
 
+// Home 애니메이션
+$(function () {
+    $('#Home').on("mousemove", function (event) {
+        var window_height = $('#Home').height();
+        var window_width = $('#Home').width();
+        var mouseXpos = event.clientX;
+        var mouseYpos = event.clientY;
+        var YrotateDeg = (window_width / 2 - mouseXpos) * -0.05;
+        var XrotateDeg = (window_height / 2 - mouseYpos) * 0.05;
+        $("#Home article").css({
+            'transform': `translateX(${-YrotateDeg}px) translateY(${XrotateDeg}px)`,
+            'transform-origin': 'center'
+        });
+    });
 
+});
 
 // 스크롤좌표값 구하기
 $(function () {
@@ -66,7 +81,7 @@ $(function () {
         });
         // about
         $(window).on('scroll', function () {
-            if (Aboutsection <= scrollposition + 1) {
+            if (Aboutsection <= scrollposition + 10) {
                 $('.idc-about').addClass('on');
                 $('.idc-home').removeClass('on');
                 $('.idc-contact').removeClass('on');
@@ -192,20 +207,20 @@ $(function () {
 });
 
 // typeit
-$(function () {
-    new TypeIt("#Home article header h1", {
-        strings: "뜨거운 웹퍼블리셔는",
-        speed: 300,
-        // waitUntilVisible: true,
-        cursor: false
-    }).go();
-    new TypeIt("#Home article p", {
-        strings: "잠을 자지 않는다.",
-        speed: 300,
-        startDelay: 3000,
-        // waitUntilVisible: true,
-    }).go();
-});
+// $(function () {
+//     new TypeIt("#Home article header h1", {
+//         strings: "뜨거운 웹퍼블리셔는",
+//         speed: 300,
+//         // waitUntilVisible: true,
+//         cursor: false
+//     }).go();
+//     new TypeIt("#Home article p", {
+//         strings: "잠을 자지 않는다.",
+//         speed: 300,
+//         startDelay: 3000,
+//         // waitUntilVisible: true,
+//     }).go();
+// });
 
 
 // about second floor 프로그레스바 

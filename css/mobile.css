@@ -17,8 +17,7 @@
 
 #main-header.on {
     height: 70px;
-    background-color: #CEFFAF;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+    background-color: transparent;
 }
 
 #main-header .logo {
@@ -114,15 +113,7 @@
 }
 
 #main-header #mobile-toggle-menu li.on {
-    /* color: pink; */
-
-    /* background-image: url('../images/profile.jpeg'); */
-    background: linear-gradient(blue, pink);
-    background-repeat: repeat-y;
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    color: var(--main-color);
 }
 
 
@@ -131,7 +122,6 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: #FCFFE7;
 
     background-image: url('../images/profile.jpeg');
     background-size: cover;
@@ -156,7 +146,7 @@
     width: 50vw;
     height: 50vh;
     /* outline: 2px solid red; */
-    font-size: 5rem;
+    /* font-size: 5rem; */
     color: #fff;
 }
 
@@ -166,8 +156,8 @@
 /* about 섹션 */
 #About {
     width: 100vw;
-    height: 300vh;
-    background-color: #CEFFAF;
+    height: 100vh;
+    background-color: transparent;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -182,18 +172,18 @@
 
 #About .first-floor {
     width: 100%;
-    height: 200vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .mask-color-filter {
-    background-color: #CEFFAF;
+    background-color: transparent;
 }
 
 .profile-clip {
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
 
     background-image: url('../images/profile.jpeg');
     background-size: contain;
@@ -205,114 +195,438 @@
 
 #About .first-floor .intro {
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     /* outline: 2px solid red; */
     color: #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: right;
+    align-items: center;
+    text-align: left;
+    padding: 20vh 2vw;
 }
 
-#About .first-floor .intro header {
-    font-size: 4rem;
-    margin-bottom: 20px;
+#About .first-floor .intro section {
+    width: 70%;
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
 
+#About .first-floor .intro section .section-highlighter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+}
+
+#About .first-floor .intro h2 {
+    font-size: 3rem;
 }
 
 #About .first-floor .intro p {
     font-size: 2rem;
 }
 
-#About .second-floor {
+/* 2층 */
+.second-floor {
     width: 100%;
-    height: 100vh;
+    height: 150vh;
+    background-color: #f3f3f3;
     display: flex;
+    justify-content: center;
+}
+
+.second-floor .container {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+.second-floor .container .skill-title {
+    width: 100%;
+    height: 10vh;
     font-size: 3rem;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
 }
 
-#About .second-floor .skill-title {
-    width: 40vw;
-}
-
-#About .second-floor .skill {
+.second-floor .container .skill {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 30px;
+    gap: 2vh;
+    margin-top: 30px;
 }
+
+.second-floor .container .skill li {
+    width: 100%;
+    height: 25vh;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+}
+
+.second-floor .container .skill li header {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.second-floor .container .skill li .skill-icon {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-floor .container .skill li .skill-icon img {
+    width: 100%;
+    display: block;
+}
+
+.second-floor .container .skill li .skill-icon .progress {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.second-floor .container .skill li .skill-icon .progress span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+.second-floor .container .skill li .skill-section {
+    width: 60%;
+}
+.second-floor .container .skill li .skill-name {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    position: relative;
+
+}
+
+.second-floor .container .skill li .skill-name:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 60%;
+    height: 100%;
+
+    border-bottom: 5px solid var(--main-color);
+}
+
+.second-floor .container .skill li .skill-info {
+    width: 100%;
+    height: 35%;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    position: relative;
+}
+
+.second-floor .container .skill li .skill-info:after {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    content: "";
+    width: 30%;
+    height: 100%;
+
+    border-bottom: 5px solid var(--main-color);
+
+}
+
 
 
 /* about 섹션 끝*/
 
-/* work 섹션 */
+/* work 섹션 ---------------------------------*/
 
 #Work {
     width: 100vw;
     height: 100vh;
-    background-color: #C9FFF5;
-    display: flex;
-    align-items: center;
-}
-
-#Work .work-list {
-    width: 20vw;
-    height: 40%;
-    font-size: 2rem;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    position: relative;
+
+    /* border-bottom: 1px dotted var(--main-color); */
+}
+
+#Work .work_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 50vh solid transparent;
+    border-top: 50vh solid #f3f3f3;
+    border-left: 50vw solid #f3f3f3;
+    border-right: 50vw solid transparent;
+}
+
+/* 워크섹션 네비게이터 */
+#Work .work-list {
+    width: 100vw;
+    height: 20%;
+    padding: 0 15vw;
+    padding-top: 100px;
+    font-size: 2rem;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+
+    z-index: 9;
+    text-align: center;
 }
 
 #Work .work-list>li {
     width: 10vw;
+    height: auto;
+    transition: 0.5s;
+    color: #000;
+}
+
+#Work .work-list>li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #000;
+    transform: scaleX(0);
+    transition: transform .5s ease-in-out;
+}
+
+#Work .work-list>li:hover:after {
+    transform: scaleX(1);
+}
+
+
+#Work .work-list>li:after {
+    transform-origin: 0% 50%;
 }
 
 #Work .work-list>li.on {
-    border-bottom: 1px solid black;
+    color: red;
 }
 
+/* 워크섹션 작업물  */
 #Work .work-contents {
-    width: 80vw;
-    height: 100%;
-    border: 2px solid red;
+    position: absolute;
+    width: 100vw;
+    height: 80vh;
+    top: 20vh;
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
 
+#swiper-btn-left {
+    margin-top: 25vh;
+    margin-left: 25vw;
+    padding: 20px;
+    color: var(--main-color);
+}
+
+#swiper-btn-left:hover {
+    transition: .5s;
+    transform: translateX(-20%);
+}
+
+#swiper-btn-right {
+    margin-top: 25vh;
+    margin-right: 25vw;
+    padding: 20px;
+    color: var(--main-color);
+}
+
+#swiper-btn-right:hover {
+    transition: .5s;
+    transform: translateX(20%);
+}
+
+#Work .work-contents.hide {
+    opacity: 0;
+    transform: translateX(10%);
+}
+
+#Work .work-contents.on {
+    transition: 0.5s;
+    opacity: 1;
+    z-index: 9;
+    transform: translateX(0);
+}
+
+#Work .work-contents .container {
+    margin-top: 10vh;
+    width: 100%;
+    position: relative;
+}
+
+#Work .work-contents .container .row {
+    width: 80vw;
+    height: 50vh;
+}
+
+
+/* 상세보기 레이아웃 */
+#contents-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 50vh;
+    border: 1.5px solid var(--main-color);
+    border-radius: 15px;
+    background-color: #fff;
+    z-index: 9;
+}
+
+#contents-wrapper article {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+}
+
+#contents-wrapper article .left-side {
+    width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#Work .work-contents .con {
-    width: 300px;
-    height: 200px;
-    outline: 2px solid red;
-    z-index: 1;
-    position: relative;
+#contents-wrapper article .left-side .thumbnail {
+    width: 70%;
+    height: 100%;
+    /* outline: 1px solid red; */
 }
 
-#Work .work-contents .con a {
+#contents-wrapper article .left-side .thumbnail img {
+    margin: 0 auto;
     width: 100%;
-    height: 100%;
     display: block;
 }
+.mobile-site #contents-wrapper article .left-side .thumbnail img {
+    width: auto;
+    height: 90%;
+}
 
-#Work .work-contents .con .detail {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: none;
+#contents-wrapper article .right-side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-#Work .work-contents .con:hover {
-    background-color: rgba(0, 0, 0, 0.406);
+#contents-wrapper article .right-side .work-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-#Work .work-contents .con:hover .detail {
-    position: absolute;
-    bottom: 0;
+#contents-wrapper article .right-side .work-info span {
+    font-size: 1.5rem;
+}
+
+#contents-wrapper article .right-side .work-info span h2 {
+    font-size: 1.8rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+#contents-wrapper article .right-side .work-info span p {
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+#contents-wrapper article .right-side .detail-btn-group {
+    width: 100%;
+    padding: 10px 20px;
     display: flex;
+    justify-content: space-between;
+}
+
+#readme {
+    width: 15vw;
+    height: 4vh;
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+#readme a {
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    display: block;
+}
+
+#gotogit {
+    width: 15vw;
+    height: 4vh;
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+#gotogit a {
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    display: block;
+}
+
+
+/* 모달창------- */
+.modal-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 10;
+}
+
+.modal-shadow.on {
+    display: block;
+}
+
+#work-modal {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    height: calc(100vh - 100px);
+    background-color: #fff;
+    z-index: 10;
+    overflow-y: scroll;
+}
+
+#work-modal img {
+    width: 100%;
+    display: none;
 }
 
 
@@ -332,5 +646,80 @@
 #Contact {
     width: 100vw;
     height: 100vh;
-    background-color: pink;
+    /* border: 30px solid pink; */
+    position: relative;
+    /* z-index: 1; */
+    /* background-image: url('../4907157.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+#Contact .thx {
+    position: absolute;
+    width: 80vw;
+    height: 20vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#Contact .thx h1 {
+    font-size: 5rem;
+}
+
+#Contact .contact-way {
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    display: flex;
+    gap: 5rem;
+    text-align: center;
+}
+
+#Contact .contact-way a {
+    position: relative;
+    width: 15vw;
+}
+
+#Contact .contact-way a:after {
+    display: block;
+    content: '';
+    margin-top: 4rem;
+    border-bottom: solid 3px var(--main-color);
+    transform: scaleX(0);
+    transition: transform .5s ease-in-out;
+}
+
+#Contact .contact-way a:last-child:after {
+    display: none;
+}
+
+#Contact .contact-way>a:hover:after {
+    transform: scaleX(1);
+}
+
+#Contact .contact-way>a:after {
+    transform-origin: 0% 50%;
+}
+
+#Contact .contact-way a div {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Gowun Batang', serif;
+}
+
+#Contact .contact-way a .text-hidden {
+    display: none;
+    font-family: 'Gowun Batang', serif;
+    color: var(--main-color);
 }
