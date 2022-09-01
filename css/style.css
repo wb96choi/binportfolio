@@ -140,19 +140,4 @@ button {
 
 
 
-#swiper-btn-left {
-    padding: 20px;
-    color: pink;
-}
-#swiper-btn-left:hover {
-    transition: .5s;
-    transform: translateX(-20%);
-}
-#swiper-btn-right {
-    color: pink;
-}
-#swiper-btn-right:hover {
-    transition: .5s;
-    transform: translateX(20%);
-}
 

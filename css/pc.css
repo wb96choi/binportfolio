@@ -347,12 +347,13 @@
     /* flex-direction: column; */
     justify-content: space-between;
     align-items: center;
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
     /* box-shadow: 10px 0 5px var(--main-color); */
 
-    width: 100vw;
+    width: 70vw;
     height: 20%;
     z-index: 9;
+    text-align: center;
 }
 
 #Work .work-list>li {
@@ -386,11 +387,29 @@
 /* 워크섹션 작업물  */
 #Work .work-contents {
     position: absolute;
-    top: 10%;
-    left: 0;
-    width: 100vw;
+    width: 70vw;
+    top: 0;
+    margin: 0 auto;
     transition: 0.5s;
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
+#swiper-btn-left {  
+    padding: 20px;
+    color: pink;
+}
+#swiper-btn-left:hover {
+    transition: .5s;
+    transform: translateX(-20%);
+}
+#swiper-btn-right {
+    padding: 20px;
+    color: pink;
+}
+#swiper-btn-right:hover {
+    transition: .5s;
+    transform: translateX(20%);
 }
 
 #Work .work-contents.hide {
@@ -432,6 +451,7 @@
     background-color: #fff;
     z-index: 10;
 }
+
 
 #contents-wrapper header {
     width: 100%;
@@ -568,7 +588,6 @@
     position: absolute;
     width: 80vw;
     height: 20vh;
-    border: 2px solid red;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

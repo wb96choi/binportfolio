@@ -79,7 +79,7 @@ $(function () {
 
         // work
         $(window).on('scroll', function () {
-            if (Worksection <= scrollposition) {
+            if (Worksection <= scrollposition + 10) {
                 $('.idc-work').addClass('on');
                 $('.idc-about').removeClass('on');
                 $('.idc-contact').removeClass('on');
@@ -412,8 +412,8 @@ $(function () {
         var YrotateDeg = (window_width / 2 - mouseXpos) * -0.05;
         var XrotateDeg = (window_height / 2 - mouseYpos) * 0.05;
         $(".thx").css({
-            'transform': "rotateX(" + XrotateDeg + "deg) rotateY(" + YrotateDeg + "deg) translate(-50%, -50%)",
-            'transform-origin': 'left'
+            'transform': `translateX(${YrotateDeg}px) translateY(${-XrotateDeg}px) translate(-50%, -50%)`,
+            'transform-origin': 'center'
         });
     });
 
