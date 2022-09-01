@@ -501,7 +501,7 @@
 
 #contents-wrapper article .left-side .thumbnail img {
     margin: 0 auto;
-    width: 80%;
+    height: 90%;
     display: block;
 }
 
@@ -545,7 +545,9 @@
 
 /* 모달창------- */
 .modal-shadow {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
@@ -559,7 +561,7 @@
 
 #work-modal {
     position: absolute;
-    top: 100px;
+    top: 70px;
     left: 50%;
     transform: translateX(-50%);
     width: 70vw;
@@ -567,6 +569,9 @@
     background-color: #fff;
     z-index: 10;
     overflow-y: scroll;
+}
+#work-modal img {
+    display: none;
 }
 
 

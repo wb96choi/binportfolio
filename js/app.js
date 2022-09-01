@@ -367,11 +367,17 @@ $(function () {
 
 // work 섹션 modal
 $(function () {
-    $('#Work .work-contents .con').click(function () {
+    // 반응형
+    $('#Work .responsive #contents-wrapper:eq(0) #readme').click(function () {
         $('.modal-shadow').addClass('on');
+        $('.modal-shadow img').hide();
+        $('.modal-shadow .nisimura').show();
     });
-    $('#Work .work-contents #contents-wrapper article .detail-btn-group #readme').click(function () {
+    // 모바일
+    $('#Work .mobile-site #contents-wrapper:eq(0) #readme').click(function () {
         $('.modal-shadow').addClass('on');
+        $('.modal-shadow img').hide();
+        $('.modal-shadow .audiotech').show();
     });
     // 바깥클릭시 모달창 꺼짐
     $('.modal-shadow').click(function (e) {
