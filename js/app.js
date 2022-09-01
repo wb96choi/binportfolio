@@ -1,7 +1,8 @@
 // AOS 시작
 $(function () {
-    AOS.init();
+    AOS.init();    
 });
+
 
 // 마우스 포인터
 $(function () {
@@ -32,10 +33,10 @@ $(function () {
     $(window).scroll(function () {
         // scrollposition이 현재 스크롤 좌표임
         let scrollposition = $(window).scrollTop();
-        let Homesection = document.querySelector("#Home").offsetTop;
+        // let Homesection = document.querySelector("#Home").offsetTop;
         let Aboutsection = document.querySelector("#About").offsetTop;
         let Worksection = document.querySelector("#Work").offsetTop;
-        let Contactsection = document.querySelector("#Contact").offsetTop;
+        // let Contactsection = document.querySelector("#Contact").offsetTop;
         
         let scrollposition_bottom = $(window).scrollTop() + $(window).height();
         
@@ -97,7 +98,6 @@ $(function () {
             };
         });
 
-        console.log(scrollposition_bottom,$(document).height());
     });
 });
 
@@ -116,11 +116,12 @@ $(function () {
         strings: "뜨거운 웹퍼블리셔는",
         speed: 300,
         // waitUntilVisible: true,
+        cursor: false
     }).go();
     new TypeIt("#Home article p", {
         strings: "잠을 자지 않는다.",
         speed: 300,
-        startDelay: 1500,
+        startDelay: 3000,
         // waitUntilVisible: true,
     }).go();
 });
@@ -129,7 +130,68 @@ $(function () {
 // about second floor 프로그레스바 
 $(function () {
     function showProgress() {
-        $('.progress').circleProgress({
+        // html
+        $('.prog-html').circleProgress({
+            value: 0.9,
+            startAngle: -Math.PI / 2,
+            size: 50,
+            thickness: 10,
+            fill: {
+                color : '#ffc0cb'
+            }
+        });
+        // css
+        $('.prog-css').circleProgress({
+            value: 0.85,
+            startAngle: -Math.PI / 2,
+            size: 50,
+            thickness: 10,
+            fill: {
+                color : '#ffc0cb'
+            }
+        });
+        // javascript
+        $('.prog-js').circleProgress({
+            value: 0.85,
+            startAngle: -Math.PI / 2,
+            size: 50,
+            thickness: 10,
+            fill: {
+                color : '#ffc0cb'
+            }
+        });
+        // jquery
+        $('.prog-jq').circleProgress({
+            value: 0.85,
+            startAngle: -Math.PI / 2,
+            size: 50,
+            thickness: 10,
+            fill: {
+                color : '#ffc0cb'
+            }
+        });
+        // Figma
+        $('.prog-figma').circleProgress({
+            value: 0.7,
+            startAngle: -Math.PI / 2,
+            size: 50,
+            thickness: 10,
+            fill: {
+                color : '#ffc0cb'
+            }
+        });
+        // photoshop
+        $('.prog-ps').circleProgress({
+            value: 0.9,
+            startAngle: -Math.PI / 2,
+            size: 50,
+            thickness: 10,
+            fill: {
+                color : '#ffc0cb'
+            }
+        });
+        // Figma
+        $('.prog-illust').circleProgress({
             value: 0.75,
             startAngle: -Math.PI / 2,
             size: 50,
@@ -228,93 +290,93 @@ $(function () {
 
 
 // 그림판
-$(function () {
+// $(function () {
 
-    var canvas = document.getElementById("canvas");
+//     var canvas = document.getElementById("canvas");
 
-    var context = canvas.getContext("2d");
+//     var context = canvas.getContext("2d");
 
-    var startX = 0;
+//     var startX = 0;
 
-    var startY = 0;
+//     var startY = 0;
 
-    var endX = 0;
+//     var endX = 0;
 
-    var endY = 0;
+//     var endY = 0;
 
-    var flag = false; // mousedown여부.
-
-
-
-    $(canvas).on({
-
-        mousedown: function (event) {
-
-            var position = $(this).offset();
-
-            var x = event.pageX - position.left;
-
-            var y = event.pageY - position.top;
+//     var flag = false; // mousedown여부.
 
 
 
-            console.log(event.pageX);
+//     $(canvas).on({
 
-            console.log(position.left);
+//         mousedown: function (event) {
 
+//             var position = $(this).offset();
 
+//             var x = event.pageX - position.left;
 
-            startX = x;
-
-            startY = y;
-
-            flag = true;
-
-        },
-
-        mousemove: function (event) {
-
-            if (flag) {
+//             var y = event.pageY - position.top;
 
 
 
-                var position = $(this).offset();
+//             console.log(event.pageX);
 
-                endX = event.pageX - position.left;
-
-                endY = event.pageY - position.top;
+//             console.log(position.left);
 
 
 
-                context.beginPath();
+//             startX = x;
 
-                context.moveTo(startX, startY); //시작점
+//             startY = y;
 
-                context.lineTo(endX, endY); //끝점
+//             flag = true;
 
-                context.stroke(); //선그리기
+//         },
+
+//         mousemove: function (event) {
+
+//             if (flag) {
 
 
 
-                //끝점을 시작점으로 저장.
+//                 var position = $(this).offset();
 
-                startX = endX;
+//                 endX = event.pageX - position.left;
 
-                startY = endY;
+//                 endY = event.pageY - position.top;
 
-            }
 
-        },
 
-        mouseup: function () {
+//                 context.beginPath();
 
-            flag = false;
+//                 context.moveTo(startX, startY); //시작점
 
-        }
+//                 context.lineTo(endX, endY); //끝점
 
-    });
+//                 context.stroke(); //선그리기
 
-});
+
+
+//                 //끝점을 시작점으로 저장.
+
+//                 startX = endX;
+
+//                 startY = endY;
+
+//             }
+
+//         },
+
+//         mouseup: function () {
+
+//             flag = false;
+
+//         }
+
+//     });
+
+// });
 
 
 

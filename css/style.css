@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root {
-    --main-color : #f7a8cf;
+    --main-color : #ea8685;
 }
 
 html {
@@ -88,7 +88,17 @@ button {
 }
 
 
-
+/* .scrollsnapper {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    border: 10px solid red;
+    width: 100vw;
+    height: 100vh;
+}
+.snap {
+    scroll-snap-align: start;
+    border: 10px solid black;
+} */
 
 
 
