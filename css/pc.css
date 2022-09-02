@@ -39,28 +39,17 @@
 
 /* 헤더 로고 */
 #main-header .logo {
-    font-family: 'Gowun Batang', serif;
     text-shadow: -2px -2px 2px rgba(255, 255, 255, 0.7);
 }
 
 /* 헤더 메뉴 */
 #main-header nav #menu {
     display: flex;
-    font-family: 'Gowun Batang', serif;
     font-weight: bold;
     gap: 2vw;
-    /* text-shadow: 2px 2px 2px  rgba(255, 255, 255, 0.7); */
 }
 
 #main-header nav #menu li.on {
-    /* color: pink; */
-
-    /* background-image: url('../images/profile.jpeg'); */
-    /* background: linear-gradient(blue, pink); */
-    /* background-repeat: repeat-y;
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text; */
     color: var(--main-color);
 }
 
@@ -100,12 +89,8 @@
     top: 40vh;
     width: 50vw;
     height: 20vh;
-    /* outline: 2px solid red; */
-    /* font-size: 5rem; */
     color: #fff;
 }
-
-
 /* 홈섹션 끝 */
 
 /* about 섹션 ------------------------------*/
@@ -114,15 +99,6 @@
     height: 100vh;
     background-color: transparent;
     position: relative;
-    /* display: flex; */
-    /* flex-direction: column; */
-
-    /* background-image: url('../images/profile.jpeg');
-    background-size: contain;
-    background-attachment:fixed;
-    background-position: left;
-
-    clip-path: circle(27% at 65% 50%); */
 }
 
 #About .first-floor {
@@ -131,9 +107,7 @@
 }
 
 .mask-color-filter {
-    /* background-color: #CEFFAF; */
     background-color: transparent;
-
 }
 
 .profile-clip {
@@ -151,11 +125,9 @@
 #About .first-floor .intro {
     width: 50vw;
     height: 100vh;
-    /* outline: 2px solid red; */
     color: #000;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     text-align: left;
     padding: 20vh 2vw;
 }
@@ -325,9 +297,6 @@
     border-bottom: 5px solid var(--main-color);
 
 }
-
-
-
 /* about 섹션 끝*/
 
 /* work 섹션 ---------------------------------*/
@@ -335,15 +304,12 @@
 #Work {
     width: 100vw;
     height: 100vh;
-    /* background-color: #C9FFF5; */
     background-color: transparent;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-
-    /* border-bottom: 1px dotted var(--main-color); */
 }
 
 #Work .work_bg {
@@ -360,20 +326,14 @@
 
 /* 워크섹션 네비게이터 */
 #Work .work-list {
-    /* width: 20vw; */
-    /* height: 100%; */
+    width: 70vw;
+    height: 20%;
     padding: 0 10vw;
     padding-top: 100px;
     font-size: 2rem;
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-between;
     align-items: center;
-    /* background-color: var(--main-color); */
-    /* box-shadow: 10px 0 5px var(--main-color); */
-
-    width: 70vw;
-    height: 20%;
     z-index: 9;
     text-align: center;
 }
@@ -497,7 +457,6 @@
 #contents-wrapper article .left-side .thumbnail {
     width: 80%;
     height: 100%;
-    /* outline: 1px solid red; */
 }
 
 #contents-wrapper article .left-side .thumbnail img {
@@ -645,7 +604,6 @@
 }
 
 #Contact .contact-way {
-    font-family: 'Josefin Sans', sans-serif;
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -695,3 +653,4 @@
     font-family: 'Gowun Batang', serif;
     color: var(--main-color);
 }
+

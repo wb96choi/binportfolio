@@ -422,16 +422,6 @@ $(function () {
     });
 });
 
-
-
-
-
-
-
-
-
-
-
 // Contact 애니메이션
 $(function () {
     $('#Contact').on("mousemove", function (event) {

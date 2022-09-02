@@ -12,7 +12,6 @@ html {
     line-height: 1.285;
     scroll-behavior: smooth;
     font-family: 'Gowun Batang', serif;
-    /* font-family: 'Josefin Sans', sans-serif; */
     cursor: none;
 }
 ::-webkit-scrollbar{
@@ -20,7 +19,6 @@ html {
 }
 
 body {
-    /* background-image: linear-gradient(0deg,  rgba(44,83,131,1) 18.9%, rgba(95,175,201,1) 91.1% ); */
     background-color: #fff;
 }
 
@@ -60,59 +58,5 @@ button {
         transform: rotate(360deg);
     }
 }
-
-
-
-/* .scrollsnapper {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    border: 10px solid red;
-    width: 100vw;
-    height: 100vh;
-}
-.snap {
-    scroll-snap-align: start;
-    border: 10px solid black;
-} */
-
-
-
-
-
-/* ---- particles.js container ---- */
-#particles-js {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: transparent;
-    
-    z-index: -1;
-}
-
-/* ---- stats.js ---- */
-
-
-#stats,
-.count-particles {
-    -webkit-user-select: none;
-    margin-top: 5px;
-    margin-left: 5px;
-}
-
-#stats {
-    border-radius: 3px 3px 0 0;
-    overflow: hidden;
-}
-
-.count-particles {
-    border-radius: 0 0 3px 3px;
-}
-
-
-
-
-
-
-
 
 
