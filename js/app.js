@@ -49,14 +49,10 @@ $(function () {
     $(window).scroll(function () {
         // scrollposition이 현재 스크롤 좌표임
         let scrollposition = $(window).scrollTop();
-        // let Homesection = document.querySelector("#Home").offsetTop;
         let Aboutsection = document.querySelector("#About").offsetTop;
         let Worksection = document.querySelector("#Work").offsetTop;
-        // let Contactsection = document.querySelector("#Contact").offsetTop;
 
         let scrollposition_bottom = $(window).scrollTop() + $(window).height();
-
-
 
         // 530 이 넘으면 헤더가
         if (scrollposition >= 530) {
@@ -118,94 +114,90 @@ $(function () {
 
 // 프로그레스바 크기 반응형
 $(function () {
+    $(window).scroll(function () {
+        let scrollposition = $(window).scrollTop();
+        // about second floor 프로그레스바 
+        let Skillsection = document.querySelector(".second-floor").offsetTop;
 
-    if (window.matchMedia("(max-width: 375px)").matches) {
-        
-            $(window).scroll(function () {
-                let scrollposition = $(window).scrollTop();
-                // about second floor 프로그레스바 
-                let Skillsection = document.querySelector(".second-floor").offsetTop;
-
-                function showProgress() {
-                    // html
-                    $('.prog-html').circleProgress({
-                        value: 0.9,
-                        startAngle: -Math.PI / 2,
-                        size: 30,
-                        thickness: 5,
-                        fill: {
-                            color: '#ffc0cb'
-                        }
-                    });
-                    // css
-                    $('.prog-css').circleProgress({
-                        value: 0.85,
-                        startAngle: -Math.PI / 2,
-                        size: 30,
-                        thickness: 5,
-                        fill: {
-                            color: '#ffc0cb'
-                        }
-                    });
-                    // javascript
-                    $('.prog-js').circleProgress({
-                        value: 0.85,
-                        startAngle: -Math.PI / 2,
-                        size: 30,
-                        thickness: 5,
-                        fill: {
-                            color: '#ffc0cb'
-                        }
-                    });
-                    // jquery
-                    $('.prog-jq').circleProgress({
-                        value: 0.85,
-                        startAngle: -Math.PI / 2,
-                        size: 30,
-                        thickness: 5,
-                        fill: {
-                            color: '#ffc0cb'
-                        }
-                    });
-                    // Figma
-                    $('.prog-figma').circleProgress({
-                        value: 0.7,
-                        startAngle: -Math.PI / 2,
-                        size: 30,
-                        thickness: 5,
-                        fill: {
-                            color: '#ffc0cb'
-                        }
-                    });
-                    // photoshop
-                    $('.prog-ps').circleProgress({
-                        value: 0.9,
-                        startAngle: -Math.PI / 2,
-                        size: 30,
-                        thickness: 5,
-                        fill: {
-                            color: '#ffc0cb'
-                        }
-                    });
-                    // Figma
-                    $('.prog-illust').circleProgress({
-                        value: 0.75,
-                        startAngle: -Math.PI / 2,
-                        size: 30,
-                        thickness: 5,
-                        fill: {
-                            color: '#ffc0cb'
-                        }
-                    });
-
-                };
-
-                if (scrollposition <= Skillsection) {
-                    showProgress();
+        function showProgress() {
+            // html
+            $('.prog-html').circleProgress({
+                value: 0.9,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 5,
+                fill: {
+                    color: '#ffc0cb'
                 }
             });
-        
-    } else {
+            // css
+            $('.prog-css').circleProgress({
+                value: 0.85,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 5,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+            // javascript
+            $('.prog-js').circleProgress({
+                value: 0.85,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 5,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+            // jquery
+            $('.prog-jq').circleProgress({
+                value: 0.85,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 5,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+            // Figma
+            $('.prog-figma').circleProgress({
+                value: 0.7,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 5,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+            // photoshop
+            $('.prog-ps').circleProgress({
+                value: 0.9,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 5,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+            // Figma
+            $('.prog-illust').circleProgress({
+                value: 0.75,
+                startAngle: -Math.PI / 2,
+                size: 50,
+                thickness: 5,
+                fill: {
+                    color: '#ffc0cb'
+                }
+            });
+
+        };
+
+        if (scrollposition == Skillsection) {
+            showProgress();
+        }
+    });
+    if (window.matchMedia("(max-width: 375px)").matches) {
         $(window).scroll(function () {
             let scrollposition = $(window).scrollTop();
             // about second floor 프로그레스바 
@@ -216,7 +208,7 @@ $(function () {
                 $('.prog-html').circleProgress({
                     value: 0.9,
                     startAngle: -Math.PI / 2,
-                    size: 50,
+                    size: 30,
                     thickness: 5,
                     fill: {
                         color: '#ffc0cb'
@@ -226,7 +218,7 @@ $(function () {
                 $('.prog-css').circleProgress({
                     value: 0.85,
                     startAngle: -Math.PI / 2,
-                    size: 50,
+                    size: 30,
                     thickness: 5,
                     fill: {
                         color: '#ffc0cb'
@@ -236,7 +228,7 @@ $(function () {
                 $('.prog-js').circleProgress({
                     value: 0.85,
                     startAngle: -Math.PI / 2,
-                    size: 50,
+                    size: 30,
                     thickness: 5,
                     fill: {
                         color: '#ffc0cb'
@@ -246,7 +238,7 @@ $(function () {
                 $('.prog-jq').circleProgress({
                     value: 0.85,
                     startAngle: -Math.PI / 2,
-                    size: 50,
+                    size: 30,
                     thickness: 5,
                     fill: {
                         color: '#ffc0cb'
@@ -256,7 +248,7 @@ $(function () {
                 $('.prog-figma').circleProgress({
                     value: 0.7,
                     startAngle: -Math.PI / 2,
-                    size: 50,
+                    size: 30,
                     thickness: 5,
                     fill: {
                         color: '#ffc0cb'
@@ -266,7 +258,7 @@ $(function () {
                 $('.prog-ps').circleProgress({
                     value: 0.9,
                     startAngle: -Math.PI / 2,
-                    size: 50,
+                    size: 30,
                     thickness: 5,
                     fill: {
                         color: '#ffc0cb'
@@ -276,7 +268,7 @@ $(function () {
                 $('.prog-illust').circleProgress({
                     value: 0.75,
                     startAngle: -Math.PI / 2,
-                    size: 50,
+                    size: 30,
                     thickness: 5,
                     fill: {
                         color: '#ffc0cb'
@@ -285,7 +277,7 @@ $(function () {
 
             };
 
-            if (scrollposition <= Skillsection) {
+            if (scrollposition == Skillsection) {
                 showProgress();
             }
         });

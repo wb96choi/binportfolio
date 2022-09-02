@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root {
-    --main-color : #ea8685;
+    --main-color : #e66767;
 }
 
 html {
@@ -12,13 +12,13 @@ html {
     line-height: 1.285;
     scroll-behavior: smooth;
     font-family: 'Gowun Batang', serif;
-    cursor: none;
 }
 ::-webkit-scrollbar{
     display: none;
 }
 
 body {
+    cursor: none !important;
     background-color: #fff;
 }
 

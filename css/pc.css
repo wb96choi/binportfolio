@@ -4,9 +4,11 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #fff;
+    border: 1.5px solid;
+    border-color: difference;
+    background-color: transparent;
     transition: transform 0.2s;
-    mix-blend-mode: difference;
+    /* mix-blend-mode:difference; */
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 11;
@@ -31,7 +33,7 @@
 }
 
 #main-header.on {
-    height: 70px;
+    height: 50px;
     background-color: transparent;
     /* background-color: rgba(255, 255, 255, 0.7); */
     /* box-shadow: 0 5px 5px 1px rgba(255, 255, 255, 0.7); */
