@@ -139,8 +139,8 @@
 .eyes {
     width: 8rem;
     height: 4rem;
-    margin-top: 19rem;
-    margin-left: 16rem;
+    margin-top: 25vh;
+    margin-left: 11vw;
     display: flex;
     transform: rotate(7deg);
 }
@@ -155,9 +155,7 @@
     align-items: center;
     overflow: hidden;
 }
-.eyes .on:first-child{
-    /* transform: scale(.9); */
-}
+
 .eyes .on .me {
     width: 30%;
     height: 30%;
