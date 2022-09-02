@@ -118,6 +118,7 @@ $(function () {
 
 // 프로그레스바 크기 반응형
 $(function () {
+
     if (window.matchMedia("(max-width: 375px)").matches) {
         $(window).scroll(function () {
             let scrollposition = $(window).scrollTop();
@@ -287,6 +288,7 @@ $(function () {
             }
         });
     }
+
 });
 
 // 모바일 토글메뉴

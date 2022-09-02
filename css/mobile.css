@@ -315,7 +315,6 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    font-weight: bold;
 }
 
 .second-floor .container .skill li .skill-section {
