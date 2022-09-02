@@ -34,7 +34,7 @@ a {
 
 .wrap {
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 button {

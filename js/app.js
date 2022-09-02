@@ -119,7 +119,9 @@ $(function () {
     $(window).scroll(function () {
         let scrollposition = $(window).scrollTop();
         // about second floor 프로그레스바 
+        
         let Skillsection = document.querySelector(".second-floor").offsetTop;
+        let Worksection = document.querySelector("#Work").offsetTop;
 
         function showProgress() {
             // html
@@ -195,7 +197,7 @@ $(function () {
 
         };
 
-        if (scrollposition == Skillsection) {
+        if (scrollposition >= Skillsection - 10 && scrollposition <= Skillsection + 10) {
             showProgress();
         }
     });
@@ -279,7 +281,7 @@ $(function () {
 
             };
 
-            if (scrollposition == Skillsection) {
+            if (scrollposition >= Skillsection - 10 && scrollposition <= Skillsection + 10) {
                 showProgress();
             }
         });
