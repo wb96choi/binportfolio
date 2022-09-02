@@ -3,15 +3,18 @@
     position: fixed;
     width: 20px;
     height: 20px;
-    border-radius: 50%;
-    border: 1.5px solid;
-    border-color: difference;
-    background-color: transparent;
-    transition: transform 0.2s;
-    /* mix-blend-mode:difference; */
+
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 11;
+
+
+    border-radius: 50%;
+    border: 1.5px solid;
+    /* border-color: difference; */
+    background-color: transparent;
+    transition: transform 0.2s;
+    /* mix-blend-mode:difference; */
 }
 
 /* 헤더-------------------------------- */

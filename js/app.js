@@ -6,8 +6,12 @@ $(function () {
 
 // 마우스 포인터
 $(function () {
+    
+    
     const $cursor = document.querySelector('.mousepointer');
     document.addEventListener('mousemove', function (e) {
+        document.body.requestPointerLock();
+
         $cursor.style.left = e.clientX + 'px';
         $cursor.style.top = e.clientY + 'px';
     });
