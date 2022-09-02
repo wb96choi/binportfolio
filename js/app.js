@@ -43,6 +43,7 @@ $(function () {
 
 });
 
+
 // 스크롤좌표값 구하기
 $(function () {
     $(window).scroll(function () {
@@ -111,90 +112,181 @@ $(function () {
             };
         });
 
-
-
-        // about second floor 프로그레스바 
-        let Skillsection = document.querySelector(".second-floor").offsetTop;
-        
-        function showProgress() {
-            // html
-            $('.prog-html').circleProgress({
-                value: 0.9,
-                startAngle: -Math.PI / 2,
-                size: 50,
-                thickness: 10,
-                fill: {
-                    color: '#ffc0cb'
-                }
-            });
-            // css
-            $('.prog-css').circleProgress({
-                value: 0.85,
-                startAngle: -Math.PI / 2,
-                size: 50,
-                thickness: 10,
-                fill: {
-                    color: '#ffc0cb'
-                }
-            });
-            // javascript
-            $('.prog-js').circleProgress({
-                value: 0.85,
-                startAngle: -Math.PI / 2,
-                size: 50,
-                thickness: 10,
-                fill: {
-                    color: '#ffc0cb'
-                }
-            });
-            // jquery
-            $('.prog-jq').circleProgress({
-                value: 0.85,
-                startAngle: -Math.PI / 2,
-                size: 50,
-                thickness: 10,
-                fill: {
-                    color: '#ffc0cb'
-                }
-            });
-            // Figma
-            $('.prog-figma').circleProgress({
-                value: 0.7,
-                startAngle: -Math.PI / 2,
-                size: 50,
-                thickness: 10,
-                fill: {
-                    color: '#ffc0cb'
-                }
-            });
-            // photoshop
-            $('.prog-ps').circleProgress({
-                value: 0.9,
-                startAngle: -Math.PI / 2,
-                size: 50,
-                thickness: 10,
-                fill: {
-                    color: '#ffc0cb'
-                }
-            });
-            // Figma
-            $('.prog-illust').circleProgress({
-                value: 0.75,
-                startAngle: -Math.PI / 2,
-                size: 50,
-                thickness: 10,
-                fill: {
-                    color: '#ffc0cb'
-                }
-            });
-
-        };
-
-        if (scrollposition <= Skillsection) {
-            showProgress();
-        }
-
     });
+});
+
+
+// 프로그레스바 크기 반응형
+$(function () {
+    if (window.matchMedia("(max-width: 375px)").matches) {
+        $(window).scroll(function () {
+            let scrollposition = $(window).scrollTop();
+            // about second floor 프로그레스바 
+            let Skillsection = document.querySelector(".second-floor").offsetTop;
+
+            function showProgress() {
+                // html
+                $('.prog-html').circleProgress({
+                    value: 0.9,
+                    startAngle: -Math.PI / 2,
+                    size: 30,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+                // css
+                $('.prog-css').circleProgress({
+                    value: 0.85,
+                    startAngle: -Math.PI / 2,
+                    size: 30,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+                // javascript
+                $('.prog-js').circleProgress({
+                    value: 0.85,
+                    startAngle: -Math.PI / 2,
+                    size: 30,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+                // jquery
+                $('.prog-jq').circleProgress({
+                    value: 0.85,
+                    startAngle: -Math.PI / 2,
+                    size: 30,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+                // Figma
+                $('.prog-figma').circleProgress({
+                    value: 0.7,
+                    startAngle: -Math.PI / 2,
+                    size: 30,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+                // photoshop
+                $('.prog-ps').circleProgress({
+                    value: 0.9,
+                    startAngle: -Math.PI / 2,
+                    size: 30,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+                // Figma
+                $('.prog-illust').circleProgress({
+                    value: 0.75,
+                    startAngle: -Math.PI / 2,
+                    size: 30,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+
+            };
+
+            if (scrollposition <= Skillsection) {
+                showProgress();
+            }
+        });
+    } else {
+        $(window).scroll(function () {
+            let scrollposition = $(window).scrollTop();
+            // about second floor 프로그레스바 
+            let Skillsection = document.querySelector(".second-floor").offsetTop;
+
+            function showProgress() {
+                // html
+                $('.prog-html').circleProgress({
+                    value: 0.9,
+                    startAngle: -Math.PI / 2,
+                    size: 50,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+                // css
+                $('.prog-css').circleProgress({
+                    value: 0.85,
+                    startAngle: -Math.PI / 2,
+                    size: 50,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+                // javascript
+                $('.prog-js').circleProgress({
+                    value: 0.85,
+                    startAngle: -Math.PI / 2,
+                    size: 50,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+                // jquery
+                $('.prog-jq').circleProgress({
+                    value: 0.85,
+                    startAngle: -Math.PI / 2,
+                    size: 50,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+                // Figma
+                $('.prog-figma').circleProgress({
+                    value: 0.7,
+                    startAngle: -Math.PI / 2,
+                    size: 50,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+                // photoshop
+                $('.prog-ps').circleProgress({
+                    value: 0.9,
+                    startAngle: -Math.PI / 2,
+                    size: 50,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+                // Figma
+                $('.prog-illust').circleProgress({
+                    value: 0.75,
+                    startAngle: -Math.PI / 2,
+                    size: 50,
+                    thickness: 5,
+                    fill: {
+                        color: '#ffc0cb'
+                    }
+                });
+
+            };
+
+            if (scrollposition <= Skillsection) {
+                showProgress();
+            }
+        });
+    }
 });
 
 // 모바일 토글메뉴
@@ -223,96 +315,7 @@ $(function () {
 // });
 
 
-// about second floor 프로그레스바 
-$(function () {
-    let Skillsection = $('.second-floor').offsetTop;
-    console.log(Skillsection);
-    let scrollposition = $(window).scrollTop();
 
-
-    function showProgress() {
-        // html
-
-        $('.prog-html').circleProgress({
-            value: 0.9,
-            startAngle: -Math.PI / 2,
-            size: 50,
-            thickness: 10,
-            fill: {
-                color: '#ffc0cb'
-            }
-        });
-        // css
-        $('.prog-css').circleProgress({
-            value: 0.85,
-            startAngle: -Math.PI / 2,
-            size: 50,
-            thickness: 10,
-            fill: {
-                color: '#ffc0cb'
-            }
-        });
-        // javascript
-        $('.prog-js').circleProgress({
-            value: 0.85,
-            startAngle: -Math.PI / 2,
-            size: 50,
-            thickness: 10,
-            fill: {
-                color: '#ffc0cb'
-            }
-        });
-        // jquery
-        $('.prog-jq').circleProgress({
-            value: 0.85,
-            startAngle: -Math.PI / 2,
-            size: 50,
-            thickness: 10,
-            fill: {
-                color: '#ffc0cb'
-            }
-        });
-        // Figma
-        $('.prog-figma').circleProgress({
-            value: 0.7,
-            startAngle: -Math.PI / 2,
-            size: 50,
-            thickness: 10,
-            fill: {
-                color: '#ffc0cb'
-            }
-        });
-        // photoshop
-        $('.prog-ps').circleProgress({
-            value: 0.9,
-            startAngle: -Math.PI / 2,
-            size: 50,
-            thickness: 10,
-            fill: {
-                color: '#ffc0cb'
-            }
-        });
-        // Figma
-        $('.prog-illust').circleProgress({
-            value: 0.75,
-            startAngle: -Math.PI / 2,
-            size: 50,
-            thickness: 10,
-            fill: {
-                color: '#ffc0cb'
-            }
-        });
-
-    };
-
-    // $('.progress').mouseenter(function () {
-    //     showProgress();
-    // });
-    if (scrollposition >= Skillsection) {
-        showProgress();
-    }
-
-});
 
 
 
