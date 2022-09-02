@@ -392,6 +392,11 @@ $(function () {
         $('.modal-shadow img').hide();
         $('.modal-shadow .nisimura').show();
     });
+    $('#Work .responsive #contents-wrapper:eq(1) #readme').click(function () {
+        $('.modal-shadow').addClass('on');
+        $('.modal-shadow img').hide();
+        $('.modal-shadow .seongnam').show();
+    });
     // 모바일
     $('#Work .mobile-site #contents-wrapper:eq(0) #readme').click(function () {
         $('.modal-shadow').addClass('on');
