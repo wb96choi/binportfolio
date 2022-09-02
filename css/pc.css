@@ -72,11 +72,19 @@
     height: 100vh;
     /* background-color: #FCFFE7; */
 
-    /* background-image: url('../images/profile.jpeg'); */
+    background-image: url('../images/profile_bg.svg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: bottom;
 }
+#Home img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 
 #Home:before {
     position: absolute;
@@ -86,15 +94,15 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 #Home article {
     position: absolute;
-    right: 0;
-    top: 40vh;
-    width: 50vw;
-    height: 20vh;
-    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    font-size: 3rem;
 }
 /* 홈섹션 끝 */
 
@@ -119,12 +127,42 @@
     width: 50vw;
     height: 100vh;
 
-    background-image: url('../images/profile.jpeg');
+    background-image: url('../images/profile.png');
     background-size: contain;
     background-attachment: fixed;
-    background-position: left;
-
-    clip-path: circle(27% at 56% 50%);
+    
+    clip-path: circle(30% at 56% 40%);
+    display: flex;
+    justify-content: center;
+    
+}
+.eyes {
+    width: 8rem;
+    height: 4rem;
+    margin-top: 19rem;
+    margin-left: 16rem;
+    display: flex;
+    transform: rotate(7deg);
+}
+.eyes .on {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.eyes .on:first-child{
+    /* transform: scale(.9); */
+}
+.eyes .on .me {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background-color: #000;
 }
 
 #About .first-floor .intro {
@@ -658,6 +696,11 @@
     font-family: 'Gowun Batang', serif;
     color: var(--main-color);
 }
+
+
+
+
+
 .etc-site #contents-wrapper article{
     outline: 1px solid red;
     padding: 0;

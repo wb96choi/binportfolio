@@ -28,21 +28,21 @@ $(function () {
 
 });
 
-// Home 애니메이션
+
+// eyesonme 애니메이션
 $(function () {
-    $('#Home').on("mousemove", function (event) {
-        var window_height = $('#Home').height();
-        var window_width = $('#Home').width();
+    $('#About').on("mousemove", function (event) {
+        var window_height = $('#About').height();
+        var window_width = $('#About').width();
         var mouseXpos = event.clientX;
         var mouseYpos = event.clientY;
-        var YrotateDeg = (window_width / 2 - mouseXpos) * -0.05;
-        var XrotateDeg = (window_height / 2 - mouseYpos) * 0.05;
-        $("#Home article").css({
-            'transform': `translateX(${-YrotateDeg}px) translateY(${XrotateDeg}px)`,
+        var YrotateDeg = (window_width / 2 - mouseXpos) * -0.015;
+        var XrotateDeg = (window_height / 2 - mouseYpos) * 0.015;
+        $(".me").css({
+            'transform': `translateX(${YrotateDeg}px) translateY(${-XrotateDeg}px)`,
             'transform-origin': 'center'
         });
     });
-
 });
 
 
@@ -437,3 +437,11 @@ $(function () {
     });
 
 });
+
+
+
+// $(function(){
+// var myPath = document.querySelector('.line1');
+// var length = myPath.getTotalLength();
+// console.log(length);
+// });

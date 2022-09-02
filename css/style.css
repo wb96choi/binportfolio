@@ -61,3 +61,17 @@ button {
 }
 
 
+.line {
+    stroke-dasharray: 2734;
+    stroke-dashoffset: 0;
+    animation-name: dash;
+    animation: 3s linear alternate;
+}
+@keyframes dash {
+    0%{
+        stroke-dashoffset: 2734;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
