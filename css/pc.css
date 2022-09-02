@@ -658,4 +658,11 @@
     font-family: 'Gowun Batang', serif;
     color: var(--main-color);
 }
-
+.etc-site #contents-wrapper article{
+    outline: 1px solid red;
+    padding: 0;
+}
+.etc-site #contents-wrapper article iframe {
+    width: 100%;
+    transform: scale(1);
+}
