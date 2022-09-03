@@ -72,17 +72,16 @@
     height: 100vh;
     /* background-color: #FCFFE7; */
 
-    background-image: url('../images/profile_bg.svg');
+    /* background-image: url('../images/profile_bg.svg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: bottom;
 }
 #Home #profile {
-    position: absolute;
+    position: fixed;
     left: 0;
-
-    display: none;
+    /* display: none; */
 }
 
 
@@ -115,7 +114,7 @@
 #About {
     width: 100vw;
     height: 100vh;
-    background-color: transparent;
+    background-color: #fff;
     position: relative;
 }
 
@@ -380,7 +379,7 @@
 #Work {
     width: 100vw;
     height: 100vh;
-    background-color: transparent;
+    background-color: #fff;
 
     display: flex;
     flex-direction: column;
@@ -653,12 +652,8 @@
 #Contact {
     width: 100vw;
     height: 100vh;
-    /* border: 30px solid pink; */
     position: relative;
-    /* z-index: 1; */
-    /* background-image: url('../4907157.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; */
+    background-color: #fff;
 }
 
 #Contact .thx {

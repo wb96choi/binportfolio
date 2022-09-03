@@ -3,8 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
-    --main-color : #e66767;
+    --main-color: #e66767;
 }
 
 html {
@@ -14,12 +15,13 @@ html {
     font-family: 'Gowun Batang', serif;
     cursor: none;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     display: none;
 }
 
 body {
-    
+
     background-color: #fff;
 }
 
@@ -46,6 +48,7 @@ button {
 .github {
     width: 30px;
 }
+
 .github:hover {
     animation-name: git-rolling;
     animation-duration: 1s;
@@ -60,21 +63,23 @@ button {
     }
 }
 
-.line{
+.line {
     stroke: #000;
-    stroke-width: 10px;
-    stroke-dasharray: 100000;
-    stroke-dashoffset: 100000;
-    animation:  dash 3s forwards;
+    stroke-width: 2px;
+    stroke-dasharray: 10000;
+    stroke-dashoffset: 10000;
+    animation: dash 10s forwards;
 
-    fill: none;
+    fill: transparent;
 }
 
 @keyframes dash {
-100% { 
-    stroke-dashoffset: 0;
 
-    fill: #fff;
 
-}
+    100% {
+        stroke-dashoffset: 0;
+        stroke: transparent;
+        fill: #000;
+
+    }
 }
