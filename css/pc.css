@@ -132,17 +132,23 @@
     width: 50vw;
     height: 100vh;
 
-    background-image: url('../images/profile.png');
+    /* background-image: url('../images/profile.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
     background-position: 10px;
     
-    clip-path: circle(25% at 56% 40%);
+    clip-path: circle(25% at 56% 40%); */
     display: flex;
     justify-content: center;
     position: relative;
     
+}
+.profile-clip img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
 }
 
 .eyes {
