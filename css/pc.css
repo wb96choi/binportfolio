@@ -141,14 +141,16 @@
     clip-path: circle(25% at 56% 40%);
     display: flex;
     justify-content: center;
+    position: relative;
     
 }
 
 .eyes {
+    position: absolute;
     width: 8rem;
     height: 4rem;
-    margin-top: 26%;
-    margin-left: 22%;
+    top: 25%;
+    left: 57%;
     display: flex;
     transform: rotate(7deg);
 }
