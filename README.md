@@ -3,6 +3,12 @@
 데모사이트: https://wb96choi.github.io/binportfolio/ <br><br><br>
 피그마 시안: https://www.figma.com/file/Oz9IcbGUiAoIe6nXXh8DPS/%ED%8F%AC%ED%8F%B4..?node-id=0%3A1
 -----------------
+## 형민씨가 마음에 안든 부분
+- 상세소개눌렀을때의 공간(특히 위에 부분) 모달창에 사용자편의가 부족하다
+- 스킬에 자바를 제이쿼리랑 같이 묶고 선의 의미를 찾아라
+- 원본이미지를 첨부함으로써 조롱의 의미, 해학의 의미를 둘다 잡아라
+- iframe을 모달창으로
+
 
 <img src="readme-images/코딩.gif">
 ```
