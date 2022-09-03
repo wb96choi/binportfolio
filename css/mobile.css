@@ -129,8 +129,12 @@
 }
 #Home #profile {
     position: fixed;
-    left: 0;
-    /* display: none; */
+    width: 100%;
+    left: 30%;
+    transform: translateX(-75%);
+    bottom: 50%;
+    transform: translateY(50%);
+    z-index: -1;
 }
 
 #Home:before {
@@ -145,12 +149,14 @@
 }
 #Home article {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 100%;
+    top: 70%;
     left: 50%;
-    font-size: 3rem;
-    line-height: 9rem;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    line-height: 3rem;
     z-index: 2;
+    text-align: center;
 }
 #Home article span {
     color: var(--main-color);
@@ -177,8 +183,8 @@
 }
 
 .profile-clip {
-    width: 50vw;
-    height: 100vh;
+    width: 100vw;
+    height: 50vh;
     display: flex;
     justify-content: center;
     position: relative;
@@ -186,27 +192,24 @@
 }
 .profile-clip img {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
     height: 100%;
 }
 
 .eyes {
     position: absolute;
-    /* width: 8rem; */
-    /* height: 4rem; */
-    width: 4vw;
-    height: 2vw;
-    top: 15vw;
-    left: 26.5vw;
+    bottom: 71%;
+    right: 30%;
     display: flex;
     transform: rotate(5deg);
 }
 .eyes .on {
-    width: 2vw;
-    height: 2vw;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 1px solid black;
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -220,7 +223,6 @@
     border-radius: 50%;
     background-color: #000;
 }
-
 #About .first-floor .intro {
     width: 100vw;
     height: 50vh;
@@ -410,7 +412,7 @@
 #Work {
     width: 100vw;
     height: 100vh;
-    background-color: transparent;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -453,13 +455,7 @@
     color: #000;
 }
 
-#Work .work-list>li:after {
-    display: block;
-    content: '';
-    border-bottom: solid 3px #000;
-    transform: scaleX(0);
-    transition: transform .5s ease-in-out;
-}
+
 
 #Work .work-list>li:hover:after {
     transform: scaleX(1);
@@ -471,7 +467,7 @@
 }
 
 #Work .work-list>li.on {
-    color: red;
+    color: var(--main-color);
 }
 
 /* 워크섹션 작업물  */
@@ -613,6 +609,7 @@
 #contents-wrapper article .right-side .detail-btn-group {
     width: 100%;
     padding: 20px 0;
+    padding-right: 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -696,12 +693,8 @@
 #Contact {
     width: 100vw;
     height: 100vh;
-    /* border: 30px solid pink; */
+    background-color: #fff;
     position: relative;
-    /* z-index: 1; */
-    /* background-image: url('../4907157.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 #Contact .thx {
@@ -719,7 +712,7 @@
 }
 
 #Contact .thx h1 {
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 #Contact .contact-way {
