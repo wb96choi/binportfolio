@@ -130,15 +130,15 @@
 .profile-clip img {
     position: absolute;
     bottom: 50%;
-    right: 50%;
-    transform: translate(50%, 50%);
+    right: 0;
+    transform: translate(0, 50%);
     height: 100%;
 }
 
 .eyes {
     position: absolute;
     bottom: 71%;
-    right: 30%;
+    right: 23%;
     display: flex;
     transform: rotate(5deg);
 }
@@ -160,7 +160,33 @@
     border-radius: 50%;
     background-color: #000;
 }
-
+@media only screen and (min-width: 1919px) {
+    .eyes {
+        position: absolute;
+        bottom: 71%;
+        right: 25%;
+        display: flex;
+        transform: rotate(5deg);
+    }
+    .eyes .on {
+        width: 2.5vw;
+        height: 2.5vw;
+        border-radius: 50%;
+        border: 2px solid black;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .eyes .on .me {
+        width: 30%;
+        height: 30%;
+        border-radius: 50%;
+        background-color: #000;
+    } 
+}
 #About .first-floor .intro {
     width: 50vw;
     height: 100vh;
