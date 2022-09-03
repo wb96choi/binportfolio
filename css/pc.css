@@ -78,11 +78,11 @@
     background-attachment: fixed;
     background-position: bottom;
 }
-#Home img {
-    display: block;
+#Home #profile {
     position: absolute;
-    bottom: 0;
-    width: 100%;
+    left: 0;
+
+    display: none;
 }
 
 
@@ -103,6 +103,11 @@
     transform: translateY(-50%);
     left: 50%;
     font-size: 3rem;
+    line-height: 9rem;
+    z-index: 2;
+}
+#Home article span {
+    color: var(--main-color);
 }
 /* 홈섹션 끝 */
 
@@ -131,17 +136,19 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
+    background-position: 10px;
     
-    clip-path: circle(30% at 56% 40%);
+    clip-path: circle(25% at 56% 40%);
     display: flex;
     justify-content: center;
     
 }
+
 .eyes {
     width: 8rem;
     height: 4rem;
-    margin-top: 25vh;
-    margin-left: 11vw;
+    margin-top: 26%;
+    margin-left: 22%;
     display: flex;
     transform: rotate(7deg);
 }
@@ -172,6 +179,7 @@
     flex-direction: column;
     text-align: left;
     padding: 20vh 2vw;
+    position: relative;
 }
 
 #About .first-floor .intro section {
@@ -195,6 +203,18 @@
 
 #About .first-floor .intro p {
     font-size: 2rem;
+}
+#About .first-floor .intro .about-title {
+    position: absolute;
+    width: 50vw;
+    left: -100%;
+    bottom: 17vh;
+    font-size: 3rem;
+    line-height: 6rem;
+    padding-left: 10vw;
+}
+#About .first-floor .intro .about-title span {
+    color: var(--main-color);
 }
 
 /* 2층 */

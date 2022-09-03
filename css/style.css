@@ -60,18 +60,21 @@ button {
     }
 }
 
+.line{
+    stroke: #000;
+    stroke-width: 10px;
+    stroke-dasharray: 100000;
+    stroke-dashoffset: 100000;
+    animation:  dash 3s forwards;
 
-.line {
-    stroke-dasharray: 2734;
-    stroke-dashoffset: 0;
-    animation-name: dash;
-    animation: 3s linear alternate;
+    fill: none;
 }
+
 @keyframes dash {
-    0%{
-        stroke-dashoffset: 2734;
-    }
-    100%{
-        stroke-dashoffset: 0;
-    }
+100% { 
+    stroke-dashoffset: 0;
+
+    fill: #fff;
+
+}
 }

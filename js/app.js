@@ -6,8 +6,8 @@ $(function () {
 
 // 마우스 포인터
 $(function () {
-    
-    
+
+
     const $cursor = document.querySelector('.mousepointer');
     document.addEventListener('mousemove', function (e) {
         $cursor.style.left = e.clientX + 'px';
@@ -119,7 +119,7 @@ $(function () {
     $(window).scroll(function () {
         let scrollposition = $(window).scrollTop();
         // about second floor 프로그레스바 
-        
+
         let Skillsection = document.querySelector(".second-floor").offsetTop;
         let Worksection = document.querySelector("#Work").offsetTop;
 
@@ -440,8 +440,18 @@ $(function () {
 
 
 
-// $(function(){
-// var myPath = document.querySelector('.line1');
-// var length = myPath.getTotalLength();
-// console.log(length);
-// });
+(function($){
+    var pathes = $('#profile').find('path');
+    pathes.each(function( i, path ) {
+        var total_length = path.getTotalLength(); // 1번 부분
+ 
+        path.style.strokeDasharray = total_length + " " + total_length; // 2번 부분
+        path.style.strokeDashoffset = total_length; // 3번 부분
+ 
+        // 4번 부분
+        $('.line').animate({
+            "strokeDashoffset" : 0
+        }, 1500);
+    });
+    //}
+})(jQuery);
