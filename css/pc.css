@@ -143,8 +143,8 @@
     transform: rotate(5deg);
 }
 .eyes .on {
-    width: 30px;
-    height: 30px;
+    width: 2.5vw;
+    height: 2.5vw;
     border-radius: 50%;
     border: 2px solid black;
     background-color: #fff;
