@@ -436,6 +436,9 @@ $(function () {
         });
     });
 
+
+    var windowsize = document.documentElement.clientWidth;
+    console.log(windowsize);
 });
 
 
