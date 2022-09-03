@@ -1,3 +1,6 @@
+.mousepointer {
+    display: none;
+}
 #main-header {
     position: fixed;
     top: 0;
@@ -123,11 +126,11 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-
-    background-image: url('../images/profile.jpeg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+}
+#Home #profile {
+    position: fixed;
+    left: 0;
+    /* display: none; */
 }
 
 #Home:before {
@@ -138,37 +141,28 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
-
 #Home article {
     position: absolute;
-    right: 0;
-    top: 40vh;
-    width: 50vw;
-    height: 50vh;
-    /* outline: 2px solid red; */
-    /* font-size: 5rem; */
-    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    font-size: 3rem;
+    line-height: 9rem;
+    z-index: 2;
 }
-
-
+#Home article span {
+    color: var(--main-color);
+}
 /* 홈섹션 끝 */
 
 /* about 섹션 */
 #About {
     width: 100vw;
     height: 100vh;
-    background-color: transparent;
+    background-color: #fff;
     position: relative;
-    display: flex;
-    flex-direction: column;
-
-    /* background-image: url('../images/profile.jpeg');
-    background-size: contain;
-    background-attachment:fixed;
-    background-position: left;
-
-    clip-path: circle(27% at 65% 50%); */
 }
 
 #About .first-floor {
@@ -183,15 +177,48 @@
 }
 
 .profile-clip {
-    width: 100vw;
-    height: 50vh;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+.profile-clip img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+}
 
-    background-image: url('../images/profile.jpeg');
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: left;
+.eyes {
+    position: absolute;
+    /* width: 8rem; */
+    /* height: 4rem; */
+    width: 4vw;
+    height: 2vw;
+    top: 15vw;
+    left: 26.5vw;
+    display: flex;
+    transform: rotate(5deg);
+}
+.eyes .on {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
-    clip-path: circle(27% at 50% 50%);
+.eyes .on .me {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background-color: #000;
 }
 
 #About .first-floor .intro {
@@ -229,6 +256,21 @@
 
 #About .first-floor .intro p {
     font-size: 1.5rem;
+}
+#About .first-floor .intro .about-title {
+    position: absolute;
+    width: 50vw;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 1000px 100px #fff;
+    left: -100%;
+    bottom: 17vh;
+    font-size: 3rem;
+    line-height: 6rem;
+    padding-left: 10vw;
+}
+#About .first-floor .intro .about-title span {
+    color: var(--main-color);
 }
 
 /* 2층 */
@@ -670,7 +712,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

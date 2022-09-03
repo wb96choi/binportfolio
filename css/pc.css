@@ -70,13 +70,6 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    /* background-color: #FCFFE7; */
-
-    /* background-image: url('../images/profile_bg.svg'); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: bottom;
 }
 #Home #profile {
     position: fixed;
@@ -130,14 +123,6 @@
 .profile-clip {
     width: 50vw;
     height: 100vh;
-
-    /* background-image: url('../images/profile.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: 10px;
-    
-    clip-path: circle(25% at 56% 40%); */
     display: flex;
     justify-content: center;
     position: relative;
@@ -730,10 +715,9 @@
 
 
 .etc-site #contents-wrapper article{
-    outline: 1px solid red;
     padding: 0;
 }
 .etc-site #contents-wrapper article iframe {
-    width: 100%;
+    
     transform: scale(1);
 }
