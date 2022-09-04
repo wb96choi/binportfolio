@@ -10,11 +10,11 @@
 
 
     border-radius: 50%;
-    border: 1.5px solid;
+    border: 1.5px solid #fff;
     /* border-color: difference; */
     background-color: transparent;
     transition: transform 0.2s;
-    /* mix-blend-mode:difference; */
+    mix-blend-mode:difference;
 }
 
 /* 헤더-------------------------------- */
@@ -351,13 +351,13 @@
 
 .second-floor .container .skill li .skill-name:after {
     position: absolute;
-    top: 0;
+    top: .5rem;
     left: 0;
     content: "";
     width: 60%;
     height: 100%;
 
-    border-bottom: 5px solid var(--main-color);
+    border-bottom: 3px solid var(--main-color);
 }
 
 .second-floor .container .skill li .skill-info {
@@ -376,7 +376,7 @@
     width: 30%;
     height: 100%;
 
-    border-bottom: 5px solid var(--main-color);
+    border-bottom: 3px solid var(--main-color);
 
 }
 /* about 섹션 끝*/
@@ -525,7 +525,7 @@
     display: flex;
     width: 100%;
     height: 100%;
-    padding-top: 70px;
+    padding-top: 30px;
 }
 
 #contents-wrapper article .left-side {
@@ -620,6 +620,22 @@
     display: none;
     z-index: 10;
 }
+.modal-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 70px;
+    line-height: 70px;
+    width: 70vw;
+    text-align: center;
+    font-size: 3rem;
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
+    border: 1px solid black;
+    border-bottom: none;
+
+}
 
 .modal-shadow.on {
     display: block;
@@ -641,19 +657,43 @@
     width: 100%;
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+#etc-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 10;
+}
+#etc-modal.on {
+    display: block;
+}
+#etc-modal iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+#etc-modal #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#close .bi-x-lg {
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
 /* work 섹션 끝*/
 
 #Contact {
@@ -736,37 +776,21 @@
 
 
 /* 기타 섹션 */
-.etc-site #contents-wrapper article{
-    position: relative;
-    padding: 0;
-}
-.etc-site #contents-wrapper article iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.etc-site #contents-wrapper article .left-side {
+    width: 50%;
     height: 100%;
-}
-.etc-site #contents-wrapper article .detail {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #fff;
-    font-size: 5rem;
 }
-.etc-site #contents-wrapper article .detail a {
-    width: 70%;
-    height: auto;
-}
-.etc-site #contents-wrapper article:hover .detail {
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 1;
 
+.etc-site #contents-wrapper article .left-side .thumbnail {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.etc-site #contents-wrapper article .left-side .thumbnail img {
+    width: 100%;
+    height: auto;
 }

@@ -385,21 +385,36 @@ $(function () {
 // work 섹션 modal
 $(function () {
     // 반응형
+        //니시무라
     $('#Work .responsive #contents-wrapper:eq(0) #readme').click(function () {
         $('.modal-shadow').addClass('on');
         $('.modal-shadow img').hide();
         $('.modal-shadow .nisimura').show();
+        $('.modal-title').append(`니시무라 중공업 리뉴얼 사이트입니다.`);
     });
+        //성남
     $('#Work .responsive #contents-wrapper:eq(1) #readme').click(function () {
         $('.modal-shadow').addClass('on');
         $('.modal-shadow img').hide();
         $('.modal-shadow .seongnam').show();
+        $('.modal-title').append(`팀프로젝트 : 성남아트센터 리뉴얼 사이트입니다.`);
     });
     // 모바일
+        //오테
     $('#Work .mobile-site #contents-wrapper:eq(0) #readme').click(function () {
         $('.modal-shadow').addClass('on');
         $('.modal-shadow img').hide();
         $('.modal-shadow .audiotech').show();
+        $('.modal-title').append(`팀프로젝트 : 오디오테크니카 리뉴얼 사이트입니다.`);
+    });
+    
+    // etc
+    $('#Work .etc-site #contents-wrapper:eq(0) #readme').click(function(){
+        $('#etc-modal').addClass('on');
+    });
+    // etc 닫기
+    $('#etc-modal #close').click(function(){
+        $('#etc-modal').removeClass('on');
     });
     // 바깥클릭시 모달창 꺼짐
     $('.modal-shadow').click(function (e) {

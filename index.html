@@ -24,6 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
     <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 부트스트랩 아이콘 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -554,8 +556,8 @@
            </svg>
            
             <article>
-                <h1>노력하는 사람에겐 행운이 따라온다.</h1>
-                <h2>안녕하세요. <br><span>운좋은 웹퍼블리셔 최원빈입니다.</span></h2>
+                <h1 data-aos="fade-left" data-aos-duration="3000">노력하는 사람에겐 행운이 따라온다.</h1>
+                <h2 data-aos="fade-left" data-aos-duration="3000" data-aos-delay="200">안녕하세요. <br><span>운좋은 웹퍼블리셔 최원빈입니다.</span></h2>
             </article>
         </main>
 
@@ -611,9 +613,6 @@
             <div class="bar-deco-right" data-aos="slide-left" data-aos-duration="1000">
 
             </div>
-            <!-- <div class="bar-deco-left" data-aos="slide-right" data-aos-duration="2000">
-
-                    </div> -->
             <div class="container">
                 <div class="skill-title" data-aos="fade-down" data-aos-duration="3000">
                     <h2>SKILLS</h2>
@@ -631,22 +630,22 @@
                                 <img src="images/css-icon.png" alt="CSS">
                                 <div class="progress prog-css"><span>85%</span></div>
                             </div>
-                            <div class="skill-icon">
-                                <img src="images/javascript-icon.png" alt="Javascript">
-                                <div class="progress prog-js"><span>85%</span></div>
-                            </div>
                         </header>
                         <div class="skill-section">
                             <div class="skill-name">
-                                <h3>H<small>TML </small>C<small>SS</small> J<small>avascript</small></h3>
+                                <h3>H<small>TML </small>C<small>SS</small></h3>
                             </div>
                             <div class="skill-info">
-                                <p>HTML, CSS, Javascript를 이해하며 잘 다룰 수 있습니다.</p>
+                                <p>HTML, CSS를 이해하며 잘 다룰 수 있습니다.</p>
                             </div>
                         </div>
                     </li>
                     <li data-aos="fade-up" data-aos-duration="1000">
                         <header>
+                            <div class="skill-icon">
+                                <img src="images/javascript-icon.png" alt="Javascript">
+                                <div class="progress prog-js"><span>85%</span></div>
+                            </div>
                             <div class="skill-icon">
                                 <img src="images/jquery-icon.png" alt="jQuery">
                                 <div class="progress prog-jq"><span>85%</span></div>
@@ -654,7 +653,7 @@
                         </header>
                         <div class="skill-section">
                             <div class="skill-name">
-                                <h3>jQuery</h3>
+                                <h3> J<small>avascript</small> j<small>Query</small></h3>
                             </div>
                             <div class="skill-info">
                                 <p>Javascript의 가장 기본적인 라이브러리인 jQuery의 문법을 이해하고 어떻게 써야 적절할지 파악하고 있습니다.</p>
@@ -816,56 +815,7 @@
             </div>
             <div class="work-contents pc-site swiper">
                 <div class="swiper-wrapper container">
-                    <div class="row swiper-slide">
-                        <div id="contents-wrapper">
 
-                            <article>
-                                <div class="left-side">
-                                    <div class="thumbnail">
-                                        <img src="work-image/nisimura.png" alt="니시무라 중공업 리뉴얼사이트 썸네일">
-                                    </div>
-                                </div>
-                                <div class="right-side">
-                                    <div class="work-info">
-                                        <span>
-                                            <h2>프로젝트 개요</h2>
-                                            <p>기존의 니시무라 중공업 사이트를 <br>리뉴얼했습니다.</p>
-                                        </span>
-                                        <span>
-                                            <h2>작업기간</h2>
-                                            <p>2022.8.15 ~ 2022.8.20</p>
-                                        </span>
-                                        <span>
-                                            <h2>작업기여도</h2>
-                                            <p>기여도 100% (개인작업)</p>
-                                        </span>
-                                        <span>
-                                            <h2>사용기술</h2>
-                                            <p>HTML CSS Javascript jQuery Photoshop</p>
-                                        </span>
-                                    </div>
-                                    <div class="detail-btn-group">
-                                        <button id="readme">
-
-
-                                        </button>
-                                        <button id="gotogit">
-                                            <a href="https://wb96choi.github.io/hyein_bin/" target="_blank">Github</a>
-
-                                        </button>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="row swiper-slide">
-                        <div id="contents-wrapper">
-                            <article class="notyet">
-                                <h1>준비중입니다.</h1>
-                                <img src="images/warning.png" alt="준비중입니다.">
-                            </article>
-                        </div>
-                    </div>
                     <div class="row swiper-slide">
                         <div id="contents-wrapper">
                             <article class="notyet">
@@ -931,14 +881,6 @@
                             </article>
                         </div>
                     </div>
-                    <div class="row swiper-slide">
-                        <div id="contents-wrapper">
-                            <article class="notyet">
-                                <h1>준비중입니다.</h1>
-                                <img src="images/warning.png" alt="준비중입니다.">
-                            </article>
-                        </div>
-                    </div>
 
                 </div>
 
@@ -951,16 +893,40 @@
                         <div id="contents-wrapper">
 
                             <article>
-                                <iframe width="100%" src="https://wb96choi.github.io/real_bmoproject/"></iframe>
-                                <div class="detail"><a href="https://github.com/wb96choi/real_bmoproject" target="_blank">자세히 보기</a></div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="row swiper-slide">
-                        <div id="contents-wrapper">
-                            <article class="notyet">
-                                <h1>준비중입니다.</h1>
-                                <img src="images/warning.png" alt="준비중입니다.">
+                                <div class="left-side">
+                                    <div class="thumbnail">
+                                        <img src="work-image/bmoproject_thumb.gif" alt="디지털 시계 프로젝트">
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="work-info">
+                                        <span>
+                                            <h2>프로젝트 개요</h2>
+                                            <p>수업시간에 배운 시계 제작 코드로 <br>인터랙티브한 페이지를 만들었습니다.</p>
+                                        </span>
+                                        <span>
+                                            <h2>작업기간</h2>
+                                            <p>2022.6.23 ~ 2022.6.23</p>
+                                        </span>
+                                        <span>
+                                            <h2>작업기여도</h2>
+                                            <p>기여도 100% (과제)</p>
+                                        </span>
+                                        <span>
+                                            <h2>사용기술</h2>
+                                            <p>jQuery</p>
+                                        </span>
+                                    </div>
+                                    <div class="detail-btn-group">
+                                        <button id="readme">
+                                            상세보기
+                                        </button>
+                                        <button id="gotogit">
+                                            <a href="https://github.com/wb96choi/real_bmoproject" target="_blank">Github</a>
+
+                                        </button>
+                                    </div>
+                                </div>
                             </article>
                         </div>
                     </div>
@@ -980,11 +946,16 @@
             </div>
 
             <div class="modal-shadow">
+                <div class="modal-title"></div>
                 <div id="work-modal">
                     <img class="nisimura" src="work-image/nisimura-detailpage.jpg" alt="니시무라 상세보기">
                     <img class="audiotech" src="work-image/at-detailpage.jpg" alt="오디오테크니카 상세보기">
                     <img class="seongnam" src="work-image/seongnam-detailpage.jpg" alt="성남아트센터 상세보기">
                 </div>
+            </div>
+            <div id="etc-modal">
+                <iframe src="https://wb96choi.github.io/real_bmoproject/"></iframe>
+                <button id="close"><i class="bi bi-x-lg"></i></button>
             </div>
 
 
