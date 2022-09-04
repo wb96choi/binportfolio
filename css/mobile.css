@@ -184,7 +184,7 @@
 
 .profile-clip {
     width: 100vw;
-    height: 50vh;
+    height: 40vh;
     display: flex;
     justify-content: center;
     position: relative;
@@ -201,20 +201,28 @@
 .eyes {
     position: absolute;
     bottom: 71%;
-    right: 30%;
+    right: 36%;
     display: flex;
     transform: rotate(5deg);
 }
 .eyes .on {
-    width: 15px;
-    height: 15px;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
     border: 1px solid black;
     background-color: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
     overflow: hidden;
+    animation-name: mobile-rolling;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes mobile-rolling {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .eyes .on .me {
@@ -223,9 +231,19 @@
     border-radius: 50%;
     background-color: #000;
 }
+
+@media only screen and (min-width: 375px){
+    .eyes {
+        position: absolute;
+        bottom: 71%;
+        right: 33%;
+        display: flex;
+        transform: rotate(5deg);
+    }
+}
 #About .first-floor .intro {
     width: 100vw;
-    height: 50vh;
+    height: 60vh;
     /* outline: 2px solid red; */
     color: #000;
     display: flex;
@@ -234,14 +252,14 @@
     gap: 1rem;
     align-items: center;
     text-align: left;
-    padding: 20vh 2vw;
+    padding: 1vh 2vw;
 }
 
 #About .first-floor .intro section {
     width: 70%;
     position: relative;
-    padding-bottom: 20px;
-    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
 }
 
 #About .first-floor .intro section .section-highlighter {
@@ -702,9 +720,8 @@
     font-size: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between;   
 }
-
 #Contact .thx h1 {
     font-size: 3rem;
 }
@@ -725,15 +742,6 @@
 #Contact .contact-way a {
     position: relative;
     width: 15vw;
-}
-
-#Contact .contact-way a:after {
-    display: block;
-    content: '';
-    margin-top: 4rem;
-    border-bottom: solid 3px var(--main-color);
-    transform: scaleX(0);
-    transition: transform .5s ease-in-out;
 }
 
 #Contact .contact-way a:last-child:after {
@@ -783,4 +791,7 @@
 .etc-site #contents-wrapper article .left-side .thumbnail img {
     width: 100%;
     height: auto;
+}
+#etc-modal {
+    display: none;
 }
