@@ -613,6 +613,10 @@
     display: flex;
     justify-content: space-between;
 }
+/* 모바일에선 기타 모달창 안나오게함 */
+.etc-site #contents-wrapper article .right-side .detail-btn-group #readme {
+    display: none;
+}
 
 #readme {
     width: 15vw;
@@ -676,19 +680,9 @@
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* work 섹션 끝*/
+
+
 
 #Contact {
     width: 100vw;
@@ -766,4 +760,27 @@
     display: none;
     font-family: 'Gowun Batang', serif;
     color: var(--main-color);
+}
+
+
+
+
+/* 기타 섹션 */
+.etc-site #contents-wrapper article .left-side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.etc-site #contents-wrapper article .left-side .thumbnail {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.etc-site #contents-wrapper article .left-side .thumbnail img {
+    width: 100%;
+    height: auto;
 }
