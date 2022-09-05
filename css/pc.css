@@ -36,9 +36,9 @@
 }
 
 #main-header.on {
-    height: 50px;
-    background-color: transparent;
-    /* background-color: rgba(255, 255, 255, 0.7); */
+    height: 70px;
+    /* background-color: transparent; */
+    background-color: rgba(255, 255, 255, 0.7);
     /* box-shadow: 0 5px 5px 1px rgba(255, 255, 255, 0.7); */
 }
 
@@ -138,7 +138,7 @@
 .eyes {
     position: absolute;
     bottom: 71%;
-    right: 22%;
+    right: 16rem;
     display: flex;
     transform: rotate(5deg);
 }
@@ -164,12 +164,12 @@
     .eyes {
         position: absolute;
         bottom: 71%;
-        right: 20rem;
+        right: 16rem;
         display: flex;
         transform: rotate(5deg);
     } 
 }
-@media only screen and (min-width: 1919px) {
+@media only screen and (min-width: 1920px) {
     .eyes {
         position: absolute;
         bottom: 71%;
@@ -267,15 +267,6 @@
     display: none;
 }
 
-.second-floor .bar-deco-left {
-    position: absolute;
-    left: 0;
-    bottom: 8vh;
-    width: 70vw;
-    height: 40px;
-    background-color: var(--main-color);
-}
-
 .second-floor .container {
     display: flex;
     flex-direction: column;
@@ -297,7 +288,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 6vh;
 }
 
 .second-floor .container .skill li {
@@ -373,6 +364,7 @@
     width: 100%;
     height: 35%;
     font-size: 1.5rem;
+    line-height: 2rem;
     margin-top: 20px;
     position: relative;
 }
@@ -534,7 +526,7 @@
     display: flex;
     width: 100%;
     height: 100%;
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 #contents-wrapper article .left-side {
@@ -559,6 +551,7 @@
 #contents-wrapper article .right-side {
     width: 50%;
     height: 100%;
+    padding-top: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -577,6 +570,7 @@
 
 #contents-wrapper article .right-side .work-info span h2 {
     font-size: 1.8rem;
+    line-height: 2.3rem;
     font-weight: bolder;
     margin-bottom: 10px;
 }
@@ -614,7 +608,7 @@
 #gotogit a {
     width: 100%;
     height: 100%;
-    line-height: 30px;
+    line-height: 4vh;
     display: block;
 }
 
