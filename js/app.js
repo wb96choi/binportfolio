@@ -54,7 +54,6 @@ $(function () {
         let Aboutsection = document.querySelector("#About").offsetTop;
         let Skillsection = document.querySelector(".second-floor").offsetTop;
         let Worksection = document.querySelector("#Work").offsetTop;
-console.log(scrollposition, Aboutsection, Skillsection, Worksection)
         let scrollposition_bottom = $(window).scrollTop() + $(window).height();
 
         // 530 이 넘으면 헤더가
@@ -116,7 +115,6 @@ console.log(scrollposition, Aboutsection, Skillsection, Worksection)
                 $('.idc-contact').removeClass('on');
             };
         });
-
     });
 });
 
@@ -304,26 +302,6 @@ $(function () {
     });
 });
 
-// typeit
-// $(function () {
-//     new TypeIt("#Home article header h1", {
-//         strings: "뜨거운 웹퍼블리셔는",
-//         speed: 300,
-//         // waitUntilVisible: true,
-//         cursor: false
-//     }).go();
-//     new TypeIt("#Home article p", {
-//         strings: "잠을 자지 않는다.",
-//         speed: 300,
-//         startDelay: 3000,
-//         // waitUntilVisible: true,
-//     }).go();
-// });
-
-
-
-
-
 
 // work 섹션 탭버튼
 $(function () {
@@ -397,14 +375,14 @@ $(function () {
         $('.modal-shadow').addClass('on');
         $('.modal-shadow img').hide();
         $('.modal-shadow .nisimura').show();
-        $('.modal-title').append(`니시무라 중공업 리뉴얼 사이트입니다.`);
+        $('.modal-title').html(`니시무라 중공업 리뉴얼 사이트입니다.`);
     });
         //성남
     $('#Work .responsive #contents-wrapper:eq(1) #readme').click(function () {
         $('.modal-shadow').addClass('on');
         $('.modal-shadow img').hide();
         $('.modal-shadow .seongnam').show();
-        $('.modal-title').append(`팀프로젝트 : 성남아트센터 리뉴얼 사이트입니다.`);
+        $('.modal-title').html(`팀프로젝트 : 성남아트센터 리뉴얼 사이트입니다.`);
     });
     // 모바일
         //오테
@@ -412,7 +390,7 @@ $(function () {
         $('.modal-shadow').addClass('on');
         $('.modal-shadow img').hide();
         $('.modal-shadow .audiotech').show();
-        $('.modal-title').append(`팀프로젝트 : 오디오테크니카 리뉴얼 사이트입니다.`);
+        $('.modal-title').html(`팀프로젝트 : 오디오테크니카 리뉴얼 사이트입니다.`);
     });
     
     // etc

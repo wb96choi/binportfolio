@@ -400,9 +400,9 @@
 /* 워크섹션 네비게이터 */
 #Work .work-list {
     width: 70vw;
-    height: 20%;
+    height: 20vh;
     padding: 0 10vw;
-    padding-top: 100px;
+    padding-top: 20vh;
     font-size: 2rem;
     display: flex;
     justify-content: space-between;
