@@ -52,8 +52,9 @@ $(function () {
         // scrollposition이 현재 스크롤 좌표임
         let scrollposition = $(window).scrollTop();
         let Aboutsection = document.querySelector("#About").offsetTop;
+        let Skillsection = document.querySelector(".second-floor").offsetTop;
         let Worksection = document.querySelector("#Work").offsetTop;
-
+console.log(scrollposition, Aboutsection, Skillsection, Worksection)
         let scrollposition_bottom = $(window).scrollTop() + $(window).height();
 
         // 530 이 넘으면 헤더가
@@ -73,7 +74,6 @@ $(function () {
         $(window).on('scroll', function () {
             if (scrollposition < Aboutsection) {
                 $('.idc-home').addClass('on');
-                $('.idc-contact').removeClass('on');
             } else {
                 $('.idc-home').removeClass('on');
             };
@@ -83,9 +83,17 @@ $(function () {
             if (Aboutsection <= scrollposition + 10) {
                 $('.idc-about').addClass('on');
                 $('.idc-home').removeClass('on');
-                $('.idc-contact').removeClass('on');
             } else {
                 $('.idc-about').removeClass('on');
+            };
+        });
+         // skill
+         $(window).on('scroll', function () {
+            if (Skillsection <= scrollposition + 10) {
+                $('.idc-skill').addClass('on');
+                $('.idc-about').removeClass('on');
+            } else {
+                $('.idc-skill').removeClass('on');
             };
         });
 
@@ -93,8 +101,7 @@ $(function () {
         $(window).on('scroll', function () {
             if (Worksection <= scrollposition + 10) {
                 $('.idc-work').addClass('on');
-                $('.idc-about').removeClass('on');
-                $('.idc-contact').removeClass('on');
+                $('.idc-skill').removeClass('on');
             } else {
                 $('.idc-work').removeClass('on');
             };
