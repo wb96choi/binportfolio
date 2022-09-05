@@ -164,7 +164,7 @@
     .eyes {
         position: absolute;
         bottom: 71%;
-        right: 16rem;
+        right: 22%;
         display: flex;
         transform: rotate(5deg);
     } 
