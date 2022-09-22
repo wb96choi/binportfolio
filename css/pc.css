@@ -100,6 +100,12 @@
 #Home article span {
     color: var(--main-color);
 }
+#Home .recommend-browser{
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    font-size: 1.5rem;
+}
 /* 홈섹션 끝 */
 
 /* about 섹션 ------------------------------*/
