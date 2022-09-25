@@ -400,6 +400,10 @@ $(function () {
     $('#etc-modal #close').click(function(){
         $('#etc-modal').removeClass('on');
     });
+    // 모달창 닫ㅣ
+    $('.modal-title #close').click(function(){
+        $('.modal-shadow').removeClass('on');
+    });
     // 바깥클릭시 모달창 꺼짐
     $('.modal-shadow').click(function (e) {
         if (!$('#work-modal').has(e.target).length) $('.modal-shadow').removeClass('on');
